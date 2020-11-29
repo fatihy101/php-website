@@ -195,7 +195,7 @@ semper interdum sed elit.</p>
                                     <p>David Albert Weds Molly Hales Freitag conh asellus ullam corper laoreet leo hendreri olestie mauris ac nibh egestas.</p>
                                 </div>
                             </div>
-                            <!-- /.realwedding-blockkk -->
+                            <!-- /.realwedding-block -->
                         </div>
             </div>
         </div>
