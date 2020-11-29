@@ -31,96 +31,9 @@
 </head>
 
 <body>
-     <div class="topbar">
-        <!-- topbar start -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                    <p class="welcome-text">1 Numaralı Evlilik Adresi</p>
-                </div>
-                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                    <div class="header-social">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                        </ul>
-                    </div>
-                     <div class="search">
-                        <!-- Large modal -->
-                        <a href="#" type="button" class="" data-toggle="modal" data-target=".search-modal"><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.topbar end -->
-    <div class="header">
-        <!-- header -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="header-logo">
-                        <!-- header logo -->
-                        <a href="index.html" title="WedPress - HTML Wedding Website Templates"><img src="images/logo.png" alt="WedPress - HTML Wedding Website Templates"></a>
-                    </div>
-                    <!-- /.header logo -->
-                </div>
-                <div class="col-md-8"><img src="images/ad-leaderboard.jpg" alt=""></div>
-            </div>
-        </div>
-    </div>
-    <!-- /.header -->
-    <div class="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- navigations -->
-                    <div id='navigation'>
-                        <ul>
-                            <li><a href='index-6.html'>Ana Sayfa</a>
-                              
-                            </li>
-                            <li class='active'><a href='post-default.html'>Galeri</a>
-                            </li>
-                            <li><a href='category-sidebar.html'>Hizmetlerimiz</a>
-                                <ul>
-                                    <li><a href='category-sidebar.html'>Salon 1</a>
-                                    <li><a href='category-sidebar.html'>Salon 2</a></li>
-                                    <li><a href='category-sidebar.html'>Salon 3</a></li>
-                                    <li><a href='category-sidebar.html'>Salon 4</a></li>
-                                </ul>
-                            </li>
-                            <li><a href='#'>Hakkımızda</a>
-                                <ul>
-                                    <li><a href='category-sidebar.html'>Category Version</a>
-                                        <ul>
-                                            <li><a href="category-sidebar.html">Category / Sidebar</a></li>
-                                            <li><a href="category-3column.html">Category / 3 Column</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href='#'>Author Post</a>
-                                        <ul>
-                                            <li><a href="author-page.html">Author Post / Sidebar</a></li>
-                                            <li><a href="author-page-fullwidth.html">Author Post / Single</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="aboutus-page.html">About us</a></li>
-                                    <li><a href="404error-page.html">404 Error</a></li>
-                                </ul>
-                            </li>
-                            <li><a href='contactus-page.html'>Bize Ulaşın</a></li>
-                            <li><a href='wedding-submit-page.html'>Submit Real Weddings</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /.navigations -->
-            </div>
-        </div>
-    </div>
+    <!--Topbar, navbar required-->
+    <?php require 'header-default.html';?>
+    
     <div class="container">
         <div class="row">
           <div class="col-md-16">
@@ -531,35 +444,6 @@ massa condit one tristique.</p>
     <!-- slider script -->
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/slider-carousel.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
-    <script src="/__/firebase/8.1.1/firebase-firestore.js"></script>
-
-    <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-        apiKey: "AIzaSyABY_zKiZSvUpKFFOk2dvavv-gjFXsTr6w",
-        authDomain: "wedpress-test.firebaseapp.com",
-        databaseURL: "https://wedpress-test.firebaseio.com",
-        projectId: "wedpress-test",
-        storageBucket: "wedpress-test.appspot.com",
-        messagingSenderId: "651729896218",
-        appId: "1:651729896218:web:54f9a46da817db237ca2a3",
-        measurementId: "G-LCZVHB1P07"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-    </script>
-
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
-
+   
 </body>
 </html>
