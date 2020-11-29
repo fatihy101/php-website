@@ -2,32 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Can't find wedding magazine template? dont worry we have work for you. WedPress is HTML Wedding Website Templates for your wedding business. Download Now.">
-    <meta name="keywords" content="Wedding Magazine Website Template, Responsive Wedding Magazine Website Template, Bootstrap Wedding Magazine Website Template, Wedding Magazine, Real Weddings, Photographer, Wedding Venue, wedding Destinations">
-    <title>WedPress - HTML Wedding Website Templates</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <!-- style.css -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Google Fonts.css -->
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7cKarla:400,400i,700,700i" rel="stylesheet">
+    <?php require 'headtag-metas.html';?>
+ 
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet">
     <!-- owl Carousel Css -->
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
     <link rel="stylesheet" href="myForm.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  
 </head>
 
 <body>
@@ -337,110 +319,7 @@ massa condit one tristique.</p>
         </div>
     </div>
 
-
-    <div class="instagram-feed">
-        <!-- instagram feed -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                    <div class="section-header text-center">
-                        <h2 class="heading-line"><i class="fa fa-instagram"></i> Bizi INSTAGRAM'da Takip Edin </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nopadding">
-                    <a href="#"><img src="images/post-horizontal-img-1.jpg" class="img-responsive" alt="Wedding Magazine Website Template"></a>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nopadding">
-                    <a href="#"><img src="images/post-horizontal-img-4.jpg" class="img-responsive" alt="Wedding Magazine Website Template"></a>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nopadding">
-                    <a href="#"> <img src="images/post-horizontal-img-2.jpg" class="img-responsive" alt="Wedding Magazine Website Template"></a>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nopadding">
-                    <a href="#"> <img src="images/post-horizontal-img-3.jpg" class="img-responsive" alt="Wedding Magazine Website Template"></a>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nopadding">
-                    <a href="#"><img src="images/post-horizontal-img-5.jpg" class="img-responsive" alt="Wedding Magazine Website Template"></a>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nopadding">
-                    <a href="#"><img src="images/post-horizontal-img-4.jpg" class="img-responsive" alt="Wedding Magazine Website Template"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nopadding">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nopadding">
-                    <div class="footer-social text-center">
-                        <h2 class="widget-title">Sosyal Medya Adreslerimiz</h2>
-                        <ul class="listnone">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nopadding">
-                    <div class="footer-newsletter text-center">
-                        <h2 class="widget-title">Join our Newsletter</h2>
-                        <!-- Text input-->
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Email Address">
-                            <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit">Submit</button>
-                          </span>
-                        </div>
-                        <!-- /input-group -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tiny-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <p class="copyright">All rights reserved - © WedPress Magazine 2017</p>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <p class="text-link text-right"><a href="#">Advertising</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- search box modal popup -->
-    <div class="modal fade search-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
-                         </span>
-                        </div>
-                        <!-- /input-group -->
-                    </div>
-                    <!-- /.col-lg-6 -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <?php require 'footer-default.html';?>
     <!-- slider script -->
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/slider-carousel.js"></script>

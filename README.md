@@ -1,8 +1,9 @@
 # site1-wedpress
 
 ## TODO
-- Header ve footer div'leri farklı dosyalara kaydedip, PHP ile içeri aktarılacak.
-- Firestore
+- Header ve footer div'leri farklı dosyalara kaydedip, PHP ile içeri aktarılacak. [DONE]
+- Firestore [ABORT]
+- MySQL'i bağla. 
 - Mobile uyumlu hale getir.
 - "Hizmetlerim" ve "Salonlarımız" düzenlenecek.  
 
