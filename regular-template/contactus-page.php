@@ -41,41 +41,35 @@
                                     <div class="col-md-6">
                                         <!-- Text input-->
                                         <div class="form-group">
-                                            <label class="control-label" for="name">İsim<span>*</span></label>
-                                            <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required>
+                                            <label class="control-label" for="name">Ad<span>*</span></label>
+                                            <input id="name" name="name" type="text" placeholder="Adınız" class="form-control input-md" required>
                                         </div>
                                     </div>
                                     <!-- Text input-->
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label" for="email">E-mail <span>*</span></label>
-                                            <input id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md" required>
+                                            <label class="control-label" for="email">Soyad<span>*</span></label>
+                                            <input id="surname" name="surname" type="text" placeholder="Soyadınız" class="form-control input-md" required>
+
                                         </div>
                                     </div>
                                     <!-- Text input-->
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <div class="form-group">
-                                                <label class=" control-label" for="Contactfor">İletişim Nedeni</label>
-                                                <div class="">
-                                                    <select id="Contactfor" name="Contactfor" class="form-control">
-                                                        <option value="Wedding Tips">Düğün Salonu</option>
-                                                        <option value="Wedding Planning">Evlilik Planı</option>
-                                                        <option value="Wedding Venue">Koşullar</option>
-                                                        <option value="Advertisement">Tavsiye</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            <label class="control-label" for="name">E-posta<span>*</span></label>
+                                            <input id="email" name="email" type="text" placeholder="epostam@gmail.com" class="form-control input-md" required>
+                                           
+                                        
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <label class="control-label" for="textarea">Mesajınız</label>
-                                        <textarea class="form-control" id="textarea" name="textarea" rows="6" placeholder="Message"></textarea>
+                                        <textarea class="form-control" id="textarea" name="textarea" rows="6" placeholder="Mesajınız"></textarea>
                                     </div>
                                     <div class="col-md-12">
                                         <!-- Button -->
                                         <div class="form-group">
-                                            <button id="singlebutton" name="singlebutton" class="btn btn-default">İlet</button>
+                                            <button id="singlebutton" name="singlebutton" class="btn btn-default">Gönder</button>
                                         </div>
                                     </div>
                                 </div>
