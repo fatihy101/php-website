@@ -52,7 +52,7 @@
           <form>
          <div class="row">
          <div class="form-group col-md-5">
-            <label for="inputTopic" class="control-label">İSİM</label>
+            <label for="inputTopic" class="control-label">AD</label>
                 <input type="text" class="form-control"  name="surname" />  
          </div>
                   
@@ -61,18 +61,17 @@
                       <input type="text" class="form-control"  name="surname" />  
             </div>
           <div class="col-md-12">
-            <label class="control-label" for="textarea">Message</label>
+            <label class="control-label" for="textarea">MESAJ</label>
             <textarea class="form-control" id="textarea" name="textarea" rows="3" placeholder="Mesajınızı buraya bırakabilirsiniz."></textarea>
         </div>
         <div class="col-md-8">
             <div class="form-group">
-                <label class="control-label" for="email">E-mail<span>*</span></label>
+                <label class="control-label" for="email">E-POSTA<span>*</span></label>
                 <input id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md" required>
             </div>
         </div>
             <div class="form-group col-md-10">
-                <label class="sr-only control-label"  for="submit" >Onay</label>
-                <button id="submit" name="submit" class="btn btn-default">Onay</button>
+                <button id="submit" name="submit" class="btn btn-default">Gönder</button>
             </div>
           </form>
         </div>

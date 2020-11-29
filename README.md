@@ -8,3 +8,9 @@
 - "Hizmetlerim" ve "Salonlarımız" düzenlenecek.  
 
 ### NOT: regular-template'in içinde düzenlendikten sonra silinecek dosyalar var. 
+
+## Admin
+- Galeriye fotoğraf yükleme.
+- Form verilerini alma ve silme. 
+- Salon detaylarını değiştirme.
+- Genel bilgileri değiştirme.
