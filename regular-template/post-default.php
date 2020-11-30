@@ -10,8 +10,7 @@
     <?php require 'header-default.html';?>
 
     <!-- post author block -->
-    <div class="post-author-block">
-        <div class="post-author">
+   
             <!-- post author -->
 
             <!-- post author -->
@@ -31,7 +30,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="related-post">
-                        <a href="#"><img src="images/galeri-1.jpg"></a>
+                        <a href="#"><img src="https://source.unsplash.com/360x360?wedding"></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">2021 yılının en görkemli düğünü </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -41,7 +40,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="related-post">
-                        <a href="#"><img src="images/galeri-2.jpg" alt=""></a>
+                        <a href="#"><img src="https://source.unsplash.com/360x360?groom" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Yeni hayatınıza burada başlayacaksınız </a></h3>
                             <p class="meta">Tarih <span class="meta meta-category"><a href="#"
@@ -51,7 +50,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="related-post">
-                        <a href="#"><img src="images/galeri-3.jpg" alt=""></a>
+                        <a href="#"><img src="https://source.unsplash.com/360x360?bride" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">En mutlu gününüz bugün </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -70,7 +69,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="related-post">
-                        <a href="#"><img src="images/galeri-4.jpg" alt=""></a>
+                        <a href="#"><img src="https://source.unsplash.com/360x360?love" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Yeni hayatınıza ilk adım </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -80,7 +79,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="related-post">
-                        <a href="#"><img src="images/galeri-5.jpg" alt=""></a>
+                        <a href="#"><img src="https://source.unsplash.com/360x360?ring" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Tüm imkanlarımız sizin için </a></h3>
                             <p class="meta">Tarih <span class="meta meta-category"><a href="#"
@@ -90,7 +89,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="related-post">
-                        <a href="#"><img src="images/galeri-6.jpg" alt=""></a>
+                        <a href="#"><img src="https://source.unsplash.com/360x360?engagement" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Her döneme uygun düğün paketleri </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -109,7 +108,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="related-post">
-                        <a href="#"><img src="images/galeri-7.jpg" alt=""></a>
+                        <a href="#"><img src="https://source.unsplash.com/360x360?couple" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Yüksek kapasitemiz ile hizmetinizdeyiz </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -119,7 +118,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="related-post">
-                        <a href="#"><img src="images/galeri-8.jpg" alt=""></a>
+                        <a href="#"><img src="https://source.unsplash.com/360x360?marry" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Her şey planladığınız gibi olacak </a></h3>
                             <p class="meta">Tarih <span class="meta meta-category"><a href="#"
@@ -305,18 +304,9 @@
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="widget widget-categories">
+           
                     <!-- widget category start -->
-                    <h2 class="widget-title">categories</h2>
-                    <ul>
-                        <li><a href="#">Planning</a> <span class="badge">6</span></li>
-                        <li><a href="#">Real Weddings</a><span class="badge">2</span></li>
-                        <li><a href="#">Fashion</a><span class="badge">9</span></li>
-                        <li><a href="#">Gallery</a><span class="badge">4</span></li>
-                        <li><a href="#">Destinations</a><span class="badge">8</span></li>
-                    </ul>
-                </div>
+                 
                 <!-- widget category start -->
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -363,18 +353,7 @@
 
 
                 <!-- widget category start -->
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="widget widget-archive">
-                    <!-- widget category start -->
-                    <h2 class="widget-title">Archives</h2>
-                    <ul>
-                        <li><a href="#">June 2018</a></li>
-                        <li><a href="#">March 2018</a></li>
-                        <li><a href="#">February 2018</a></li>
-                        <li><a href="#">January 2018</a></li>
-                    </ul>
-                </div>
+            
                 <!-- widget category start -->
             </div>
         </div>

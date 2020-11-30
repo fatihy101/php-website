@@ -65,7 +65,7 @@
                 </div>
             <div class="col-md-12">
                 <label class="control-label" for="textarea">MESAJ</label>
-                <textarea class="form-control" id="textarea" name="textarea" rows="3" placeholder="Mesajınızı buraya bırakabilirsiniz." required></textarea>
+                <textarea class="form-control" id="textarea" name="textarea" rows="3" placeholder="Mesaaaajınızı buraya bırakabilirsiniz." required></textarea>
             </div>
             <div class="col-md-8">
                 <div class="form-group">

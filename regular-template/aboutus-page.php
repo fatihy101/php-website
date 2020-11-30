@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                         <div class="section-header">
-                            <h2 class="heading-line">Meet the Editor Team</h2>
+                            <h2 class="heading-line">EKİBİMİZ</h2>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
