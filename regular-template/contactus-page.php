@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                            <form class="contact-form">
+                            <form class="contact-form" action="db_files/insert-form.php" method="post">
                                 <div class="row">
                                     <!-- Textarea -->
                                     <div class="col-md-6">

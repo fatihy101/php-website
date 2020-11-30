@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <?php require 'headtag-metas.html';?>
+    <?php 
+    require 'headtag-metas.html';
+    ?>
  
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet">
     <!-- owl Carousel Css -->
@@ -14,8 +16,9 @@
 
 <body>
     <!--Topbar, navbar required-->
-    <?php require 'header-default.html';?>
-    
+    <?php 
+    require 'header-default.html';
+    ?>
     <div class="container">
         <div class="row">
           <div class="col-md-16">
@@ -49,31 +52,31 @@
       </div>
         <div class="myForm">
           <h1> Başvurun </h1>
-          <form>
-         <div class="row">
-         <div class="form-group col-md-5">
-            <label for="inputTopic" class="control-label">AD</label>
-                <input type="text" class="form-control"  name="surname" />  
-         </div>
-                  
+        <form method="post" action="db_files/insert-form.php">
+            <div class="row">
             <div class="form-group col-md-5">
-                  <label for="inputTopic" class="control-label">SOYAD</label>
-                      <input type="text" class="form-control"  name="surname" />  
+                <label for="inputTopic" class="control-label">AD</label>
+                    <input type="text" class="form-control"  name="name" required/>  
             </div>
-          <div class="col-md-12">
-            <label class="control-label" for="textarea">MESAJ</label>
-            <textarea class="form-control" id="textarea" name="textarea" rows="3" placeholder="Mesajınızı buraya bırakabilirsiniz."></textarea>
-        </div>
-        <div class="col-md-8">
-            <div class="form-group">
-                <label class="control-label" for="email">E-POSTA<span>*</span></label>
-                <input id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md" required>
+                    
+                <div class="form-group col-md-5">
+                    <label for="inputTopic" class="control-label">SOYAD</label>
+                        <input type="text" class="form-control"  name="surname" required/>  
+                </div>
+            <div class="col-md-12">
+                <label class="control-label" for="textarea">MESAJ</label>
+                <textarea class="form-control" id="textarea" name="textarea" rows="3" placeholder="Mesajınızı buraya bırakabilirsiniz." required></textarea>
             </div>
-        </div>
-            <div class="form-group col-md-10">
-                <button id="submit" name="submit" class="btn btn-default">Gönder</button>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label class="control-label" for="email">E-POSTA<span>*</span></label>
+                    <input id="email" name="email" type="text" placeholder="E-mail" class="form-control input-md" required>
+                </div>
             </div>
-          </form>
+                <div class="form-group col-md-10">
+                    <button id="submit" name="submit" class="btn btn-default">Gönder</button>
+                </div>
+        </form>
         </div>
           </div>
         </div>
