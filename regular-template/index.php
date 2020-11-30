@@ -52,7 +52,7 @@
       </div>
         <div class="myForm">
           <h1> Başvurun </h1>
-        <form method="post" action="db_files/insert-form.php">
+        <form method="post" action="insert-form.php">
             <div class="row">
             <div class="form-group col-md-5">
                 <label for="inputTopic" class="control-label">AD</label>

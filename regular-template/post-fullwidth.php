@@ -14,7 +14,7 @@
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#">Post</a></li>
                         <li class="active">Post Fullwidth Page</li>
                     </ol>

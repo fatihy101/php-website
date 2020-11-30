@@ -147,14 +147,14 @@
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="prev-post">
                         <h3 class="prev-link-title"><a href="#" class="title">Hayellerinizdeki düğün için</a></h3>
-                        <p><a href="http://127.0.0.1:5500/main_files/Wedpress-HTML/regular-template/index-6.html"
+                        <p><a href="index.php"
                                 class="prev-link btn-link">Hemen Başvurun!</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="next-post">
                         <h3 class="next-link-title"><a href="#" class="title">Merak ettiğiniz bir konu için</a></h3>
-                        <p><a href="http://127.0.0.1:5500/main_files/Wedpress-HTML/regular-template/contactus-page.html"
+                        <p><a href="contactus-page.php"
                                 class="next-link btn-link">Bizimle iletişime geçin!</a></p>
                     </div>
                 </div>

@@ -15,17 +15,17 @@ if ($conn -> connect_errno) {
   exit();
 }
 
-$name = $_POST["name"];
-$surname = $_POST["surname"];
-$email = $_POST["email"];
-$message = $_POST["textarea"];
+$name = $conn -> real_escape_string($_POST["name"]);
+$surname = $conn -> real_escape_string($_POST["surname"]);
+$email = $conn -> real_escape_string($_POST["email"]);
+$message = $conn -> real_escape_string($_POST["textarea"]);
 
 $sql = "INSERT INTO wedpress.Forms (email, message, name, surname, datetime)
 VALUES ('$email', '$message', '$name', '$surname', NOW())";
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    readfile("404error-page.php");
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }

@@ -13,7 +13,7 @@
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#">Planning</a></li>
                         <li class="active">20+ wedding venue for your wedding date in 2017</li>
                     </ol>

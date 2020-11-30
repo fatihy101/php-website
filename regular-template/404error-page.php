@@ -12,7 +12,7 @@
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li class="active">Error page</li>
                     </ol>
                 </div>
@@ -32,7 +32,7 @@
                         <!-- Error Captions -->
                         <h1 class="error-heading title">404</h1>
                         <p class="lead">We can't seems to find the page you are looking for.</p>
-                        <a href="index.html" class="btn btn-default">Go To Home page</a>
+                        <a href="index.php" class="btn btn-default">Go To Home page</a>
                     </div>
                     <!-- /.Error Captions -->
                 </div>
