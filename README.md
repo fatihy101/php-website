@@ -3,6 +3,7 @@
 ## TODO
 - Header ve footer div'leri farklı dosyalara kaydedip, PHP ile içeri aktarılacak. [DONE]
 - Firestore [ABORT]
+- Posts ekle.
 - MySQL'i bağla. 
 - Mobile uyumlu hale getir.
 - "Hizmetlerim" ve "Salonlarımız" düzenlenecek.  

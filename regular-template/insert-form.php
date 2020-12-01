@@ -25,7 +25,7 @@ VALUES ('$email', '$message', '$name', '$surname', NOW())";
 
 
 if ($conn->query($sql) === TRUE) {
-    readfile("404error-page.php");
+    echo "Added";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
