@@ -736,3 +736,41 @@ Media Query
     .error-heading { font-size: 30px; margin-bottom: 30px; line-height: 30px; letter-spacing: -1px; font-weight: 600; }
     .error-caption { background-color: #fff; padding: 20px; position: relative; text-align: center; left: 0px; }
 }
+.grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 10px;
+    height: 100hv;
+
+}
+.grid img {
+    width: 360px;
+    height: 360px;
+
+}
+
+#lightbox {
+position: fixed;
+z-index: 1000;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, .7);
+display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;    
+    max-height: 80%;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
+}
+
