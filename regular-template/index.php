@@ -14,7 +14,7 @@
   
 </head>
 
-<body>
+<body style="background-color:#FAF1F8">
     <!--Topbar, navbar required-->
     <?php 
     require 'header-default.html';
@@ -37,7 +37,7 @@
           <div class="item">
             <img src="https://s3.amazonaws.com/busites_www/mvkeywestresort/subpage_banners_weddings_1506952002.jpg" alt="..." style="height:600px; width:1400px;">
           </div>
-          ...
+          ...   
         </div>
       
         <!-- Controls -->
@@ -51,7 +51,7 @@
         </a>
       </div>
         <div class="myForm">
-          <h1> Başvurun </h1>
+          <h2 id ="form-header"> TEKLİF AL </h2>
         <form method="post" action="insert-form.php">
             <div class="row">
             <div class="form-group col-md-5">

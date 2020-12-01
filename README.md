@@ -15,3 +15,12 @@
 - Form verilerini alma ve silme. 
 - Salon detaylarını değiştirme.
 - Genel bilgileri değiştirme.
+
+## Will-changelist 
+- Renk paleti
+- Başvuru formu boyutu (Sınırlandırma)
+- Font
+- Join our newslatter kaldırılacak. 
+- Yukarıdaki ve aşağıdaki sosyal medya platformlarının bağlantılarını kaldır.
+- Altta logoyu ortala. 
+- Mess with colors.

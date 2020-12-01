@@ -338,10 +338,9 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 
 /*--------------------
      5.1 Header Regular 
-    ----------------------*/
-
-.topbar { background: rgb(255,0,138);
-    background: linear-gradient(90deg, rgba(255,0,138,1) 0%, rgba(212,10,132,1) 35%, rgba(201,0,255,1) 100%);; min-height: 30px; position: relative; }
+    --------------------ar--*/
+/* alternative gradient color:  linear-gradient(90deg, rgba(255,0,138,1) 0%, rgba(212,10,132,1) 35%, rgba(201,0,255,1) 100%); */
+.topbar {background: #9a5e8e; min-height: 30px; position: relative; color: #FFFFFF; }
 .welcome-text { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding-top: 4px; font-weight: 600; }
 .header-social { }
 .header-social ul { margin: 0px; padding: 0px; }

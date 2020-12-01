@@ -25,5 +25,14 @@ services:
     ports:
       - 2385:8080
 
+  admin-php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 90:80
+    volumes:
+      - ./admin:/var/www/html/
+
 volumes:
   mysql-data:
