@@ -33,7 +33,7 @@
         <div class="sidebar-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active-alt" href="#">
+              <a id="client-forms" class="nav-link active-alt" href="#">
                 <i data-feather="mail"></i>
                 Gelen Mesajlar <span class="sr-only">(current)</span>
               </a>
@@ -80,7 +80,7 @@
         <div
           class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h2 class="h3">Gelen Mesajlar</h2>
-          <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-toolbar mb-2 mb-md-0" id="test">
            
             <button type="button" class="btn btn-sm btn-outline-secondary mr-2"> 
               <i data-feather="archive"></i> Arşivlemiş</button>
@@ -97,14 +97,16 @@
     </div>
   </div>
 
+  <script>
+  
 
+  </script>
 
   <!--  jQuery and Bootstrap Bundle (includes Popper) -->
-  <script src="js/jquery-3.5.1.slim.min.js" />
-  <script src="js/bootstrap.bundle.min.js"> 
+  <script src="js/jquery-3.5.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"/>
   <script src="dashboard.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <script>
   feather.replace()
