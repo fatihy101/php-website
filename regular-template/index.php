@@ -10,7 +10,6 @@
     <!-- owl Carousel Css -->
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="js/form.js"></script>
 
 </head>
@@ -40,7 +39,7 @@
                             <img src="https://s3.amazonaws.com/busites_www/mvkeywestresort/subpage_banners_weddings_1506952002.jpg"
                                 alt="..." style="height:600px; width:1400px;">
                         </div>
-                        ...
+                        <br>
                     </div>
 
                     <!-- Controls -->
@@ -352,7 +351,7 @@
                                         class="meta-link">Comments</a></span>
                             </p>
                             <p>Tempor odio sed vehicula ornare libero eivamusd donec sodales etios.</p>
-                            <a href="#" class="btn-link">Read More..</a>
+                            <a href="#" class="btn-link">Read More..    .</a>
                         </div>
                     </div>
                     <!-- /.post vertical block -->

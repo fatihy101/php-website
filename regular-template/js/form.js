@@ -26,10 +26,13 @@ $(document).ready(function () {
                  $(".myForm").slideUp("slow")   
                 }  
             });
-
+        
         // stop the form from submitting the normal way and refreshing the page
         event.preventDefault();
-    
+    });
+
+    $(".carousel-control").click(function(){
+        $(".myForm").slideDown("slow")   
 
     });
 
