@@ -773,3 +773,27 @@ display: none;
     border: 2px solid white;
 }
 
+/* FORM */
+.myForm {
+    position: absolute;
+	background: rgb(255,0,138);
+	background: #9a5e8e;
+    height: 440px;
+    width: 38%;
+    top: 300px;
+	left: 20%;
+	border-width:1px;  
+	border-style:inset;
+	border-color: palevioletred;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+#form-header{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-top: 0.1em;
+	padding-left: 0.1em;
+	color: #2b2b2b;
+}
+

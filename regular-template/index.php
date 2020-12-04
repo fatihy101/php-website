@@ -54,7 +54,7 @@
                 </div>
                 <div class="myForm">
                     <h2 id="form-header"> TEKLİF AL </h2>
-                    <form method="post" action="insert-form.php">
+                    <form id="mainPageForm" method="post" action="insert-form.php">
                         <div class="row">
                             <div class="form-group col-md-5">
                                 <label for="name" class="control-label">AD</label>
@@ -76,7 +76,7 @@
 
                             <div class="form-group col-md-8">
                                     <label class="control-label" for="email">E-POSTA</label>
-                                    <input id="email" name="email" type="email" placeholder="E-mail" class="form-control input-md" required>
+                                    <input id="email" name="email" type="email" placeholder="epostam@adres.com" class="form-control input-md" required>
                             </div>
                             <div class="form-group col-md-10">
                                 <button id="submit" name="submit" class="btn btn-default">Gönder</button>
