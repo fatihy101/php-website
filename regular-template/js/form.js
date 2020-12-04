@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    $(".contatus-form").hide()
     // process the form
     $('form').submit(function (event) {
 
@@ -23,8 +23,13 @@ $(document).ready(function () {
 
             .done(function (data) {
                 if(data.success){
-                 $(".myForm").slideUp("slow")   
+                    if(this.id == "mainPageForm"){
+                        $(".myForm").slideUp("slow")   
+                    }
                 }  
+                else{
+                    // Swal fire --> fail
+                }
             });
         
         // stop the form from submitting the normal way and refreshing the page
@@ -32,8 +37,8 @@ $(document).ready(function () {
     });
 
     $(".carousel-control").click(function(){
+        
         $(".myForm").slideDown("slow")   
-
     });
 
 });
