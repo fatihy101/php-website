@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".contatus-form").hide()
+    
     // process the form
     $('form').submit(function (event) {
 
@@ -20,14 +20,25 @@ $(document).ready(function () {
                 encode: true
             })
              // using the done promise callback
-
+            //TODO: change alerts with SWAL
             .done(function (data) {
                 if(data.success){
-                    if(this.id == "mainPageForm"){
-                        $(".myForm").slideUp("slow")   
+                    if($("form").attr('id') == "mainPageForm"){
+                        $(".myForm").slideUp("slow", function(){
+                            alert("Mesajınız başarıyla gönderildi.")
+                        })   
                     }
+                    else {
+                        alert("Mesajınız başarıyla gönderildi.")
+                        $('input[name=name]').val("")
+                        $('input[name=surname]').val("")
+                        $('input[name=email]').val("")
+                        $('textarea[name=textarea]').val("")
+                    }
+
                 }  
                 else{
+                    alert("Mesajınız gönderilemedi. Daha sonra tekrar deneyin.");
                     // Swal fire --> fail
                 }
             });
