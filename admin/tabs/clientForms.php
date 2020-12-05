@@ -42,7 +42,7 @@ $client_forms = $conn->query($SQL);
 
 
     <?php 
-    while($form = mysqli_fetch_array($client_forms) ) {   ?>
+    while($form = mysqli_fetch_array($client_forms) ) {   ?> <!--Start of while-->
         <p name="formID" hidden><?php echo $form["id"];?></p>
         <div id='client-message' class='alert mx-5' role='alert'>
             <div class='row'>    
@@ -65,10 +65,10 @@ $client_forms = $conn->query($SQL);
             </div>
             <div class='btn-toolbar' role='toolbar' aria-label='Toolbar with button groups'>
                 <button type='button' name="deleteForm" class='btn btn-danger btn-sm'><i data-feather="x"></i></button>
-                <?php if($form["archive"]==0){
-                echo "<button type='button' name='archiveForm' class='btn btn-secondary btn-sm mx-1'><i data-feather='archive'></i></button>";
+                <?php if($form["archive"]==1){
+                echo "<button type='button' name='archiveForm' class='btn btn-secondary btn-sm mx-1' disabled><i data-feather='archive'></i></button>";
                 } else{
-                echo "<button type='button' name='archiveForm' class='btn btn-secondary btn-sm mx-1' disabled><i data-feather='archive'></i></button>";  
+                echo "<button type='button' name='archiveForm' class='btn btn-secondary btn-sm mx-1'><i data-feather='archive'></i></button>";  
                 } 
                 
                 if($form["has_read"]==1){
@@ -79,7 +79,7 @@ $client_forms = $conn->query($SQL);
                 ?>
             </div>
         </div> 
-    <?php }?>
+    <?php }?> <!--End of while-->
 
     }
  

@@ -3,10 +3,9 @@
 mb_internal_encoding("UTF-8");
 
 if (function_exists('date_default_timezone_set')) {
-    date_default_timezone_set('Europe/Istanbul');  // Saat dilimini ayarlayalım...
+    date_default_timezone_set('Europe/Istanbul'); 
 } else {
-    putenv("TZ=Europe/Istanbul"); // Zaman Dilimini TÜRKİYE'ye göre ayarla.
-}
+    putenv("TZ=Europe/Istanbul"); 
 
 $servername = "db"; // If it's not Docker, $servername must be localhost for dev.
 $username = "root";
