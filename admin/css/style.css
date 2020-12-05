@@ -14,6 +14,24 @@ border: 0px;
     background-color: #885888;
 }
 
+/*Override Jumbotron of Bootstrap*/
+.jumbotron{
+    background-color: rgba(240, 240, 240, 0.9);
+    border-bottom: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#client-message{
+    margin-left: 30px;
+    margin-top: 30px;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-bottom: 1px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    border-left: 1.5px solid #ccc;
+    border-right: 1.5px solid #ccc;
+}
+
+
 /*Extra sizes*/
 .mt-0 {
     margin-top: 0px !important;
