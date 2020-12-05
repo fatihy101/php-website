@@ -6,7 +6,7 @@ if (function_exists('date_default_timezone_set')) {
     date_default_timezone_set('Europe/Istanbul'); 
 } else {
     putenv("TZ=Europe/Istanbul"); 
-
+}
 $servername = "db"; // If it's not Docker, $servername must be localhost for dev.
 $username = "root";
 $password = "example";
