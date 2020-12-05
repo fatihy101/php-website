@@ -766,8 +766,8 @@ display: none;
 }
 
 #lightbox img {
-    max-width: 90%;    
-    max-height: 80%;
+    width: auto;    
+    height: auto;
     padding: 4px;
     background-color: black;
     border: 2px solid white;

@@ -3,7 +3,8 @@
 
 <head>
     <?php require 'headtag-metas.html';?>
-    
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <script src="js/lightbox-plus-jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="grid">
-                        <img src="https://source.unsplash.com/360x360?wedding"></a>
+                        <img src="https://source.unsplash.com/720x480?wedding"></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">2021 yılının en görkemli düğünü </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -40,7 +41,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="grid">
-                        <img src="https://source.unsplash.com/360x360?groom" alt=""></a>
+                        <img src="https://source.unsplash.com/720x480?groom" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Yeni hayatınıza burada başlayacaksınız </a></h3>
                             <p class="meta">Tarih <span class="meta meta-category"><a href="#"
@@ -50,7 +51,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="grid">
-                        <img src="https://source.unsplash.com/360x360?bride" alt=""></a>
+                        <img src="https://source.unsplash.com/720x480?bride" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">En mutlu gününüz bugün </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -69,7 +70,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="grid">
-                        <img src="https://source.unsplash.com/360x360?love" alt=""></a>
+                        <img src="https://source.unsplash.com/720x480?love" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Yeni hayatınıza ilk adım </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -79,7 +80,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="grid">
-                        <img src="https://source.unsplash.com/360x360?ring" alt=""></a>
+                        <img src="https://source.unsplash.com/720x480?ring" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Tüm imkanlarımız sizin için </a></h3>
                             <p class="meta">Tarih <span class="meta meta-category"><a href="#"
@@ -89,7 +90,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="grid">
-                        <img src="https://source.unsplash.com/360x360?engagement" alt="">
+                        <img src="https://source.unsplash.com/720x480?engagement" alt="">
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Her döneme uygun düğün paketleri </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -108,7 +109,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="grid">
-                        <img src="https://source.unsplash.com/360x360?couple" alt=""></a>
+                        <img src="https://source.unsplash.com/720x480?couple" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Yüksek kapasitemiz ile hizmetinizdeyiz </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -118,7 +119,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="grid">
-                        <img src="https://source.unsplash.com/360x360?marry" alt="">
+                        <img src="https://source.unsplash.com/720x480?marry" alt="">
                         
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Her şey planladığınız gibi olacak </a></h3>
@@ -363,6 +364,7 @@
     </div>
     </div>
     <?php require 'footer-default.html';?>
+    <script src="js/lightbox.js"></script>
 </body>
 
 </html>
