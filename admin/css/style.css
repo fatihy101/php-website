@@ -3,6 +3,10 @@
     width: 30em
 }
 */
+.bg-theme-light{
+    background-color: #ffffff;
+}
+
 
 #submit_button{
 background-color: #9a5e8e;

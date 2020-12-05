@@ -12,6 +12,9 @@
 </head>
 
 <body>
+  <?php
+   require_once("config.php");
+  ?>
   <nav class="navbar sticky-top flex-md-nowrap p-0 shadow theme-color">
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">WEDPRESS Admin Paneli</a>
     <ul class="navbar-nav px-3">
@@ -24,17 +27,17 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-theme-light sidebar collapse">
         <div class="sidebar-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a id="client-forms" role="button"  class="nav-link active-alt">
+              <a id="client-forms" role="button"  class="nav-link">
                 <i data-feather="mail"></i>
-                Gelen Mesajlar <span class="sr-only">(current)</span>
+                Gelen Mesajlar 
               </a>
             </li>
             <li class="nav-item">
-              <a id="new-post" role="button" class="nav-link">
+              <a id="new-post" role="button" class="nav-link ">
                 <i data-feather="file-plus"></i>
                 Yeni Gönderi Yayınla
               </a>
