@@ -30,8 +30,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="grid">
-                        <img src="https://source.unsplash.com/720x480?wedding"></a>
+                    <div class="gallery">
+                    <a href="images/wedkapak-2.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-2-small.jpg" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">2021 yılının en görkemli düğünü </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -40,8 +40,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="grid">
-                        <img src="https://source.unsplash.com/720x480?groom" alt=""></a>
+                    <div class="gallery">
+                    <a href="images/wedkapak-3.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-3-small.jpg" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Yeni hayatınıza burada başlayacaksınız </a></h3>
                             <p class="meta">Tarih <span class="meta meta-category"><a href="#"
@@ -50,8 +50,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="grid">
-                        <img src="https://source.unsplash.com/720x480?bride" alt=""></a>
+                    <div class="gallery">
+                    <a href="images/wedkapak-4.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-4-small.jpg" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">En mutlu gününüz bugün </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -69,8 +69,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="grid">
-                        <img src="https://source.unsplash.com/720x480?love" alt=""></a>
+                    <div class="gallery">
+                    <a href="images/wedkapak-5.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-5-small.jpg" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Yeni hayatınıza ilk adım </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -79,8 +79,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="grid">
-                        <img src="https://source.unsplash.com/720x480?ring" alt=""></a>
+                    <div class="gallery">
+                    <a href="images/wedkapak-6.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-6-small.jpg" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Tüm imkanlarımız sizin için </a></h3>
                             <p class="meta">Tarih <span class="meta meta-category"><a href="#"
@@ -89,8 +89,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="grid">
-                        <img src="https://source.unsplash.com/720x480?engagement" alt="">
+                    <div class="gallery">
+                    <a href="images/wedkapak-7.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-7-small.jpg" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Her döneme uygun düğün paketleri </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -108,8 +108,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="grid">
-                        <img src="https://source.unsplash.com/720x480?couple" alt=""></a>
+                    <div class="gallery">
+                        <a href="images/wedkapak.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-small.jpg" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Yüksek kapasitemiz ile hizmetinizdeyiz </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -118,9 +118,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="grid">
-                        <img src="https://source.unsplash.com/720x480?marry" alt="">
-                        
+                    <div class="gallery">
+                    <a href="images/wedtop.jpg" data-lightbox="wedkapak"> <img src="images/wedtop-small.jpg" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">Her şey planladığınız gibi olacak </a></h3>
                             <p class="meta">Tarih <span class="meta meta-category"><a href="#"
@@ -129,8 +128,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="grid">
-                        <img src="images/galeri-9.jpg" alt=""></a>
+                    <div class="gallery">
+                        <a href= "images/galeri-9.jpg" data-lightbox="wedkapak"> <img src="images/galeri-9.jpg" alt=""></a>
                         <div class="related-post-content">
                             <h3><a href="#" class="post-title">En mutlu gününüzde yanınızdayız </a></h3>
                             <p class="meta">Tarih <span class=" meta-category"><a href="#"
@@ -364,7 +363,7 @@
     </div>
     </div>
     <?php require 'footer-default.html';?>
-    <script src="js/lightbox.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
 </body>
 
 </html>

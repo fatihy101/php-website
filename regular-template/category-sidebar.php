@@ -40,10 +40,11 @@
                                             <a href="#" class="imagehover"><img src="images/galeri-3.jpg" alt=""></a>
                                         </div>
                                     </div>
-                                    <h2 style="text-align: center; background: rgb(255,0,138);
-background: linear-gradient(90deg, rgba(255,0,138,1) 0%, rgba(212,10,132,1) 79%, rgba(201,0,255,1) 100%); -webkit-box-shadow: -5px 8px 5px 0px rgba(50, 50, 50, 0.75);
+                                    <h2 style="text-align: center; background: rgb(162,0,255);
+background: linear-gradient(90deg, rgba(162,0,255,1) 0%, rgba(117,11,186,1) 41%, rgba(156,39,176,1) 100%);
+, rgba(212,10,132,1) 79%, rgba(201,0,255,1) 100%); -webkit-box-shadow: -5px 8px 5px 0px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:    -5px 8px 5px 0px rgba(50, 50, 50, 0.75);
-box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b>Salon 1</b></h2>
+box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class= "b-header">Salon 1</b></h2>
                                     <hr />
                                     - 550 Kişi Oturma Kapasiteli<br />
                                     - Ses ve Işık Sistemi<br />
