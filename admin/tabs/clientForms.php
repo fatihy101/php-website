@@ -12,13 +12,13 @@ $client_forms = $conn->query($SQL);
     <h2 class="h3">Gelen Mesajlar</h2>
     <div class="btn-toolbar mb-2 mb-md-0" id="test">
 
-        <button type="button" class="btn btn-sm btn-outline-secondary mr-2"> 
+        <button id="refresh_button" type="button" class="btn btn-sm btn-outline-secondary mr-2"> 
             <i data-feather="refresh-cw"></i> Yenile</button>
 
-        <button type="button" class="btn btn-sm btn-outline-secondary mr-2"> 
+        <button id="archived_ones_button" type="button" class="btn btn-sm btn-outline-secondary mr-2"> 
             <i data-feather="archive"></i> Arşivlenmiş</button>
 
-        <button type="button" class="btn btn-sm btn-outline-secondary mr-2"> 
+        <button id="unreads_button" type="button" class="btn btn-sm btn-outline-secondary mr-2"> 
             <i data-feather="eye-off"></i> Okunmayanlar</button>
 
         <div class="dropdown">
@@ -40,9 +40,10 @@ $client_forms = $conn->query($SQL);
 
 <!--forms-->
 
-
+<div id="form_list">
     <?php 
-    while($form = mysqli_fetch_array($client_forms)) {  //start of while ?> 
+    while($form = mysqli_fetch_array($client_forms)) { 
+        if($form['archive']==0){ //start of while ?> 
         <div id='client-message' class='alert mx-5' role='alert'>
             <div class='row'>    
                 <div class='col align-baseline'>
@@ -76,7 +77,7 @@ $client_forms = $conn->query($SQL);
                 
                 if($form["has_read"]==1){
                 echo sprintf("<button type='button' name='hasRead' data-field='%s'
-                class='btn btn-success btn-sm has_read_button' disabled><i data-feather='eye'></i></button>", $form['id']);
+                class='btn btn-success btn-sm has_read_button' disabled><i data-feather='check'></i> Okundu</button>", $form['id']);
                 } else{
                 echo sprintf("<button type='button' name='hasRead' data-field='%s'
                 class='btn btn-success btn-sm has_read_button'><i data-feather='eye'></i></button>", $form['id']);
@@ -84,45 +85,228 @@ $client_forms = $conn->query($SQL);
                 ?>
             </div>
         </div> 
-    <?php } // end of while?> 
+    <?php }
+} // end of while?> 
+</div>
 
-    }
+    
  
 
 
 <!--forms-->
 
 <script>
-    // TODO: configure url and write a php for update data.
     feather.replace()
+  
+      
     $(document).ready(function () {
-        $('.delete_button').on('click', function(){
-            var current_id = $(this).attr("data-field")
-            $.ajax({
-                type: "POST",
-                url: "crud_form/delete.php",
-                data: {id:current_id},
-                success: function (response) {
-                    $(this).parents("div").eq(1).replaceWith("<div class='alert alert-warning mx-5' role='alert'>" +    
-            "Formu başarıyla kaldırdınız.</div>");
-            $(".alert-warning").slideUp(2000)
-                }
-            });
+        
+        //TODO: Merge archived_ones_button and unreads_button bodies with a function if it's possible. 
+        // Just archived ones
+        $("#archived_ones_button").on('click', function(){
+            $("#form_list").empty()
 
+        // TODO: AJAX request for get the updated data.
+          <?php $SQL = "SELECT * FROM wedpress.Forms ORDER BY datetime DESC;";
+            $client_forms = $conn->query($SQL); ?>
+
+            var form_view = `<?php  
+            while($form = mysqli_fetch_array($client_forms)) { 
+                if($form['archive']==1){ 
+                   echo json_encode(sprintf("<div id='client-message' class='alert mx-5' role='alert'>
+                    <div class='row'>    
+                        <div class='col align-baseline'>
+                            <h5 style='margin-bottom: -1px;'>%s %s </h5>
+                            <a href='mailto:%s'> %s </a>
+                        </div>
+                    
+                        <div class='col text-right'>
+                            <small name='formID'>#%s </small><br>
+                            <small>Tarih: %s</small>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class='row'>
+                        <div class='col'>
+                            <p> 
+                              %s
+                            </p>
+                        </div>
+                    </div>
+                    <div class='btn-toolbar' role='toolbar' aria-label='Toolbar with button groups'>
+                        <button type='button' name='deleteForm' data-field='%s' 
+                        class='btn btn-danger btn-sm delete_button'><i data-feather='x'></i></button>
+                       
+                        <button type='button' name='archiveForm' data-field='%s' 
+                        class='btn btn-secondary btn-sm archive_button mx-1' disabled><i data-feather='archive'></i></button>
+                       
+                        <button type='button' name='hasRead' data-field='%s'
+                        class='btn btn-success btn-sm has_read_button' disabled><i data-feather='check'></i> Okundu</button>
+                        
+                    </div>
+                </div>", $form["name"], $form["surname"], $form["email"], $form["email"], 
+                $form["id"], $form["datetime"],$form["message"], $form["id"], $form['id'], $form['id']));
+
+                
+                } //end of if
+            }//End of while
+            ?>`
+            
+
+            $("#form_list").append(form_view.replaceAll('\"' ,'')); 
+
+            feather.replace()
+
+        }); // end of #archived_ones_button.click
+
+        // Show unread messages
+        $("#unreads_button").on('click', function(){
+            $("#form_list").empty()
+
+        // TODO: AJAX request for get the updated data.
+          <?php $SQL = "SELECT * FROM wedpress.Forms ORDER BY datetime DESC;";
+            $client_forms = $conn->query($SQL); ?>
+
+            var form_view = `<?php  
+            while($form = mysqli_fetch_array($client_forms)) { 
+                if($form['has_read']==0){ 
+                   echo json_encode(sprintf("<div id='client-message' class='alert mx-5' role='alert'>
+                    <div class='row'>    
+                        <div class='col align-baseline'>
+                            <h5 style='margin-bottom: -1px;'>%s %s </h5>
+                            <a href='mailto:%s'> %s </a>
+                        </div>
+                    
+                        <div class='col text-right'>
+                            <small name='formID'>#%s </small><br>
+                            <small>Tarih: %s</small>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class='row'>
+                        <div class='col'>
+                            <p> 
+                              %s
+                            </p>
+                        </div>
+                    </div>
+                    <div class='btn-toolbar' role='toolbar' aria-label='Toolbar with button groups'>
+                        <button type='button' name='deleteForm' data-field='%s' 
+                        class='btn btn-danger btn-sm delete_button'><i data-feather='x'></i></button>
+                       
+                        <button type='button' name='archiveForm' data-field='%s' 
+                        class='btn btn-secondary btn-sm archive_button mx-1' disabled><i data-feather='archive'></i></button>
+                       
+                        <button type='button' name='hasRead' data-field='%s'
+                        class='btn btn-success btn-sm has_read_button'><i data-feather='eye'></i></button>
+                        
+                    </div>
+                </div>", $form["name"], $form["surname"], $form["email"], $form["email"], 
+                $form["id"], $form["datetime"],$form["message"], $form["id"], $form['id'], $form['id']));
+
+                
+                } //end of if
+            }//End of while
+            ?>`
+            
+
+            $("#form_list").append(form_view.replaceAll('\"' ,'')); 
+
+            feather.replace()
+
+        }); 
+
+
+
+        // refresh all
+        $("#refresh_button").on('click', function () {
+            $("#main").empty()
+            $("#main").load("tabs/clientForms.php")
+        })
+
+        // Delete  a form
+        $('.delete_button').on('click', function(event){
+            var current_id = $(this).attr("data-field")
+            var data = {'id': current_id, 'delete':"yes"}
+            
+            var $current_object = $(this)
+            
+            $.ajax({
+                type: 'POST',
+                url: 'form_operations.php',
+                data: data,
+                dataType: 'json',
+                encode: true
+            }).done( function (data) {
+                if(data.success) {
+                    $current_object.parents("div").eq(1).replaceWith("<div class='alert alert-warning mx-5' role='alert'>" +    
+                    "Formu başarıyla kaldırdınız.</div>");
+                    $(".alert-warning").slideUp(2000)
+                }
+                else {
+                    console.log("[ERROR]: " + data.servererr)
+                    $current_object.parents("div").eq(1).prepend("<div class='alert alert-danger' role='alert'>" +    
+                    "Form kaldırılırken bir sorun oluştu.</div>");
+                    $(".alert-warning").slideUp(2000)
+                }
+                });
+            
+        
         })
 
         $('.archive_button').on('click', function(){
-            $(this).prop('disabled',true)
             var current_id = $(this).attr("data-field")
-            $(this).parents("div").eq(1).slideUp(700)
+            var data = {'id': current_id, 'archive_it':"yes"}
             
+            var $current_object = $(this)
+            
+            $.ajax({
+                type: 'POST',
+                url: 'form_operations.php',
+                data: data,
+                dataType: 'json',
+                encode: true
+            }).done( function (data) {
+                if(data.success) {
+                    $current_object.prop('disabled',true)
+                    $current_object.parents("div").eq(1).slideUp(900)
+                }
+                else {
+                    console.log("[ERROR]: " + data.servererr)
+                    $current_object.parents("div").eq(1).prepend("<div class='alert alert-danger' role='alert'>" +    
+                    "Form arşivlenirken bir sorun oluştu.</div>");
+                    $(".alert-warning").slideUp(2000)
+                }
+                });
 
         })
 
+
         $('.has_read_button').on('click', function(){
-            $(this).prop('disabled',true)
             var current_id = $(this).attr("data-field")
-            $(this).parents("div").eq(1).slideUp(350)
+            var data = {'id': current_id, 'has_read':"yes"}
+            
+            var $current_object = $(this)
+            
+            $.ajax({
+                type: 'POST',
+                url: 'form_operations.php',
+                data: data,
+                dataType: 'json',
+                encode: true
+            }).done( function (data) {
+                if(data.success) {
+                    $current_object.prop('disabled',true)
+                    $current_object.html("<i data-feather='check'></i> Okundu")
+                    feather.replace()
+                }
+                else {
+                    console.log("[ERROR]: " + data.servererr)
+                    $current_object.parents("div").eq(1).prepend("<div class='alert alert-danger' role='alert'>" +    
+                    "Okundu olarak işaretlerken bir sorun oluştu.</div>");
+                    $(".alert-warning").slideUp(2000)
+                }
+                });
             
             
         })

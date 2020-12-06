@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     // process the form
     $('form').submit(function (event) {
 
@@ -10,7 +10,7 @@ $(document).ready(function () {
             'email': $('input[name=email]').val(),
             'textarea': $('textarea[name=textarea]').val()
         };
-        
+
         // process the form
         $.ajax({
                 type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
@@ -19,16 +19,15 @@ $(document).ready(function () {
                 dataType: 'json', // what type of data do we expect back from the server
                 encode: true
             })
-             // using the done promise callback
+            // using the done promise callback
             //TODO: change alerts with SWAL
             .done(function (data) {
-                if(data.success){
-                    if($("form").attr('id') == "mainPageForm"){
-                        $(".myForm").slideUp("slow", function(){
+                if (data.success) { // To check the form is on the main page or not.
+                    if ($("form").attr('id') == "mainPageForm") {
+                        $(".myForm").slideUp("slow", function () {
                             alert("Mesajınız başarıyla gönderildi.")
-                        })   
-                    }
-                    else {
+                        }) //end of slideUp callback function
+                    } else {
                         alert("Mesajınız başarıyla gönderildi.")
                         $('input[name=name]').val("")
                         $('input[name=surname]').val("")
@@ -36,20 +35,19 @@ $(document).ready(function () {
                         $('textarea[name=textarea]').val("")
                     }
 
-                }  
-                else{
+                } else {
                     alert("Mesajınız gönderilemedi. Daha sonra tekrar deneyin.");
                     // Swal fire --> fail
                 }
             });
-        
+
         // stop the form from submitting the normal way and refreshing the page
         event.preventDefault();
     });
 
-    $(".carousel-control").click(function(){
-        
-        $(".myForm").slideDown("slow")   
+    $(".carousel-control").click(function () {
+
+        $(".myForm").slideDown("slow")
     });
 
 });
