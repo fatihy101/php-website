@@ -5,7 +5,7 @@ $SQL = "SELECT * FROM wedpress.Forms ORDER BY datetime DESC;";
 
 $client_forms = $conn->query($SQL);
 
-
+// TODO: unarchive
 ?>
 <!--Top-->
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -42,8 +42,7 @@ $client_forms = $conn->query($SQL);
 
 
     <?php 
-    while($form = mysqli_fetch_array($client_forms) ) {   ?> <!--Start of while-->
-        <p name="formID" hidden><?php echo $form["id"];?></p>
+    while($form = mysqli_fetch_array($client_forms)) {  //start of while ?> 
         <div id='client-message' class='alert mx-5' role='alert'>
             <div class='row'>    
                 <div class='col align-baseline'>
@@ -52,7 +51,8 @@ $client_forms = $conn->query($SQL);
                 </div>
             
                 <div class='col text-right'>
-                <small>Tarih: <?php echo $form["datetime"];?></small>
+                    <small name="formID">#<?php echo $form["id"];?></small><br>
+                    <small>Tarih: <?php echo $form["datetime"];?></small>
                 </div>
             </div>
             <hr>
@@ -64,22 +64,27 @@ $client_forms = $conn->query($SQL);
                 </div>
             </div>
             <div class='btn-toolbar' role='toolbar' aria-label='Toolbar with button groups'>
-                <button type='button' name="deleteForm" class='btn btn-danger btn-sm'><i data-feather="x"></i></button>
+                <button type='button' name="deleteForm" data-field='<?php echo $form["id"];?>' 
+                class='btn btn-danger btn-sm delete_button'><i data-feather="x"></i></button>
                 <?php if($form["archive"]==1){
-                echo "<button type='button' name='archiveForm' class='btn btn-secondary btn-sm mx-1' disabled><i data-feather='archive'></i></button>";
+                echo sprintf("<button type='button' name='archiveForm'data-field='%s' 
+                class='btn btn-secondary btn-sm archive_button mx-1' disabled><i data-feather='archive'></i></button>", $form['id']);
                 } else{
-                echo "<button type='button' name='archiveForm' class='btn btn-secondary btn-sm mx-1'><i data-feather='archive'></i></button>";  
+                echo sprintf("<button type='button' name='archiveForm'data-field='%s' 
+                class='btn btn-secondary btn-sm archive_button mx-1'><i data-feather='archive'></i></button>", $form['id']);  
                 } 
                 
                 if($form["has_read"]==1){
-                echo "<button type='button' name='hasRead' class='btn btn-success btn-sm' disabled><i data-feather='eye'></i></button>";
+                echo sprintf("<button type='button' name='hasRead' data-field='%s'
+                class='btn btn-success btn-sm has_read_button' disabled><i data-feather='eye'></i></button>", $form['id']);
                 } else{
-                echo "<button type='button' name='hasRead' class='btn btn-success btn-sm'><i data-feather='eye'></i></button>";
+                echo sprintf("<button type='button' name='hasRead' data-field='%s'
+                class='btn btn-success btn-sm has_read_button'><i data-feather='eye'></i></button>", $form['id']);
                 }
                 ?>
             </div>
         </div> 
-    <?php }?> <!--End of while-->
+    <?php } // end of while?> 
 
     }
  
@@ -88,5 +93,41 @@ $client_forms = $conn->query($SQL);
 <!--forms-->
 
 <script>
+    // TODO: configure url and write a php for update data.
     feather.replace()
+    $(document).ready(function () {
+        $('.delete_button').on('click', function(){
+            var current_id = $(this).attr("data-field")
+            $.ajax({
+                type: "POST",
+                url: "crud_form/delete.php",
+                data: {id:current_id},
+                success: function (response) {
+                    $(this).parents("div").eq(1).replaceWith("<div class='alert alert-warning mx-5' role='alert'>" +    
+            "Formu başarıyla kaldırdınız.</div>");
+            $(".alert-warning").slideUp(2000)
+                }
+            });
+
+        })
+
+        $('.archive_button').on('click', function(){
+            $(this).prop('disabled',true)
+            var current_id = $(this).attr("data-field")
+            $(this).parents("div").eq(1).slideUp(700)
+            
+
+        })
+
+        $('.has_read_button').on('click', function(){
+            $(this).prop('disabled',true)
+            var current_id = $(this).attr("data-field")
+            $(this).parents("div").eq(1).slideUp(350)
+            
+            
+        })
+
+    })
+    
 </script>
+
