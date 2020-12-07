@@ -7,9 +7,6 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 SET NAMES utf8mb4;
 
-CREATE DATABASE `wedpress` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `wedpress`;
-
 DROP TABLE IF EXISTS `AboutUs`;
 CREATE TABLE `AboutUs` (
   `title` int NOT NULL,
@@ -20,8 +17,18 @@ CREATE TABLE `AboutUs` (
 
 DROP TABLE IF EXISTS `AdminInfo`;
 CREATE TABLE `AdminInfo` (
-  `email` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `password` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `username` varchar(64) CHARACTER SET utf8 COLLATE utf8_turkish_ci NOT NULL,
+  `password` varchar(64) CHARACTER SET utf8 COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+
+DROP TABLE IF EXISTS `Article`;
+CREATE TABLE `Article` (
+  `article_no` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) COLLATE utf8_turkish_ci NOT NULL,
+  `image_dir` varchar(64) COLLATE utf8_turkish_ci NOT NULL,
+  `paragraph` text COLLATE utf8_turkish_ci NOT NULL,
+  PRIMARY KEY (`article_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 
@@ -32,8 +39,9 @@ CREATE TABLE `Forms` (
   `message` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `surname` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `datetime` date NOT NULL,
+  `datetime` timestamp NOT NULL,
   `archive` tinyint(1) NOT NULL DEFAULT '0',
+  `has_read` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
@@ -62,4 +70,4 @@ CREATE TABLE `VenuePhotoMatch` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- 2020-11-29 21:30:52
+-- 2020-12-07 23:55:32

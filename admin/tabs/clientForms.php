@@ -68,10 +68,10 @@ $client_forms = $conn->query($SQL);
                 <button type='button' name="deleteForm" data-field='<?php echo $form["id"];?>' 
                 class='btn btn-danger btn-sm delete_button'><i data-feather="x"></i></button>
                 <?php if($form["archive"]==1){
-                echo sprintf("<button type='button' name='archiveForm'data-field='%s' 
+                echo sprintf("<button type='button' name='archiveForm' data-field='%s' 
                 class='btn btn-secondary btn-sm archive_button mx-1' disabled><i data-feather='archive'></i></button>", $form['id']);
                 } else{
-                echo sprintf("<button type='button' name='archiveForm'data-field='%s' 
+                echo sprintf("<button type='button' name='archiveForm' data-field='%s' 
                 class='btn btn-secondary btn-sm archive_button mx-1'><i data-feather='archive'></i></button>", $form['id']);  
                 } 
                 
@@ -195,7 +195,7 @@ $client_forms = $conn->query($SQL);
                         class='btn btn-danger btn-sm delete_button'><i data-feather='x'></i></button>
                        
                         <button type='button' name='archiveForm' data-field='%s' 
-                        class='btn btn-secondary btn-sm archive_button mx-1' disabled><i data-feather='archive'></i></button>
+                        class='btn btn-secondary btn-sm archive_button mx-1'><i data-feather='archive'></i></button>
                        
                         <button type='button' name='hasRead' data-field='%s'
                         class='btn btn-success btn-sm has_read_button'><i data-feather='eye'></i></button>

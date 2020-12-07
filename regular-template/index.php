@@ -8,6 +8,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet">
     <!-- owl Carousel Css -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
     <script src="js/form.js"></script>
@@ -152,7 +154,7 @@
                 </div>
             </div>
         </div>  
-        
+   
     <?php require 'footer-default.html';?>
     <!-- slider script -->
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>

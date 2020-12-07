@@ -1,5 +1,5 @@
-$(document).ready(function () {
 
+$(document).ready(function () {
     // process the form
     $('form').submit(function (event) {
 
@@ -20,15 +20,26 @@ $(document).ready(function () {
                 encode: true
             })
             // using the done promise callback
-            //TODO: change alerts with SWAL
+            
             .done(function (data) {
                 if (data.success) { // To check the form is on the main page or not.
                     if ($("form").attr('id') == "mainPageForm") {
                         $(".myForm").slideUp("slow", function () {
-                            alert("Mesajınız başarıyla gönderildi.")
+                            Swal.fire({
+                                icon: 'success',
+                                padding: '4em',
+                                title: 'Formunuz başarıyla gönderildi.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
                         }) //end of slideUp callback function
                     } else {
-                        alert("Mesajınız başarıyla gönderildi.")
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Formunuz başarıyla gönderildi.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
                         $('input[name=name]').val("")
                         $('input[name=surname]').val("")
                         $('input[name=email]').val("")
@@ -36,8 +47,11 @@ $(document).ready(function () {
                     }
 
                 } else {
-                    alert("Mesajınız gönderilemedi. Daha sonra tekrar deneyin.");
-                    // Swal fire --> fail
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Hay aksi...',
+                        text: 'Bir şeyler ters gitti!',
+                    })
                 }
             });
 
