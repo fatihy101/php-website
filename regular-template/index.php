@@ -93,7 +93,7 @@
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                     <div class="section-header">
-                        <h2 class="heading-line">latest Article</h2>
+                        <h2 class="heading-line">Son Paylaşımlar</h2>
                         <a href="#" class="btn btn-default btn-xs pull-right"> SEE ALL POSTS</a>
                     </div>
                 </div>
@@ -105,10 +105,8 @@
                         </div>
                         <div class="post-vertical-content">
                             <h2><a href="#" class="post-title">Are You Just Engaged Tip for Wedding in 2017</a></h2>
-                            <p class="meta"><span class="meta-category"><a href="#"
-                                        class="meta-link">Planning</a></span> <span class="meta-date">19 Jan,
-                                    2017</span> <span class="meta-comments">(23) <a href="#"
-                                        class="meta-link">Comments</a></span>
+                            <p class="meta"> <span class="meta-date">19 Jan,
+                                    2017</span>
                             </p>
                             <p>Rhoncus sed eros ipsum consequt act orci semper interdum elit.</p>
                             <a href="#" class="btn-link">Read More..</a>
@@ -125,10 +123,8 @@
                         <div class="post-vertical-content">
                             <h2><a href="#" class="post-title">Best 20+ Real Wedding Couple Inspiration for 2017</a>
                             </h2>
-                            <p class="meta"><span class="meta-category"><a href="#"
-                                        class="meta-link">Destinations</a></span> <span class="meta-date">19 Jan,
-                                    2017</span> <span class="meta-comments">(23) <a href="#"
-                                        class="meta-link">Comments</a></span>
+                            <p class="meta"> <span class="meta-date">19 Jan,
+                                    2017</span>
                             </p>
                             <p>Tempor odio sed vehicula ornare libero eivamusd donec sodales etios.</p>
                             <a href="#" class="btn-link">Read More..</a>
@@ -145,9 +141,7 @@
                         <div class="post-vertical-content">
                             <h2><a href="#" class="post-title">Are You Just Engaged Tip
                                     for Wedding in 2017</a></h2>
-                            <p class="meta"><span class="meta-category"><a href="#" class="meta-link">real
-                                        weddings</a></span> <span class="meta-date">19 Jan, 2017</span> <span
-                                    class="meta-comments">(23) <a href="#" class="meta-link">Comments</a></span>
+                            <p class="meta"> <span class="meta-date">19 Jan, 2017</span>
                             </p>
                             <p>Rhoncus sed eros ipsum consequat ac orci
                                 semper interdum sed elit.</p>

@@ -94,7 +94,7 @@ blockquote.alignleft { max-width: 50%; }
 hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #f1ebef; }
 
 /* heading variations */
-.heading-line { border-bottom: 2px solid #d37fb0; display: inline-block; padding-bottom: 2px; text-transform: uppercase; font-size: 16px; letter-spacing: 2px; font-weight: 600; font-family: 'Karla', sans-serif; line-height: 1; margin-bottom: 0px; }
+.heading-line { border-bottom: 2px solid #9c27b0; display: inline-block; padding-bottom: 2px; text-transform: uppercase; font-size: 16px; letter-spacing: 2px; font-weight: 600; font-family: 'Karla', sans-serif; line-height: 1; margin-bottom: 0px; }
 .post-title, .title { color: #2b2528; }
 .listnone { list-style: none; margin: 0px 0px 0px 0px; padding: 0; }
 .lead { color: #2b2528; font-weight: 400; font-family: 'Crimson Text', serif; font-size: 28px; }
@@ -145,7 +145,7 @@ button.btn { height: 48px; padding: 10px 40px; -webkit-transition: all 0.3s; -mo
 .btn-sm { padding: 10px 15px; }
 .btn-xs { padding: 5px 10px; }
 .btn-link { color: #2b2528; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #2b2528; padding-bottom: 2px; font-family: 'Karla', sans-serif; }
-.btn-link:hover { text-decoration: none; border-bottom: 1px solid #d37fb0; color: #d37fb0; }
+.btn-link:hover { text-decoration: none; border-bottom: 1px solid #9c27b0; color: #9c27b0; }
 
 /*-----------------------------------
     4. General / Elements 
@@ -359,14 +359,14 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 #navigation, #navigation ul, #navigation ul li, #navigation ul li a, #navigation #menu-button { margin: 0; padding: 0; border: 0; list-style: none; line-height: 1; display: block; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 #navigation:after, #navigation > ul:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 #navigation #menu-button { display: none; }
-#navigation { font-family: Montserrat, sans-serif; background: rgb(250, 241, 248); border-top: 2px solid #2b2528; border-bottom: 1px solid #d3cacf; }
+#navigation { font-family: Montserrat, sans-serif; background: rgb(250, 241, 248); border-top: 2px solid #9c27b0; border-bottom: 1px solid #d3cacf; }
 #navigation > ul > li { float: left; }
 #navigation.align-center > ul { font-size: 0; text-align: center; }
 #navigation.align-center > ul > li { display: inline-block; float: none; }
 #navigation.align-center ul ul { text-align: left; }
 #navigation.align-right > ul > li { float: right; }
 #navigation > ul > li > a { padding: 17px; font-size: 13px; letter-spacing: 1px; text-decoration: none; color: #2b2528; font-weight: 700; text-transform: uppercase; font-family: 'Karla', sans-serif }
-#navigation > ul > li:hover > a { color: #d37fb0; }
+#navigation > ul > li:hover > a { color: #9c27b0; }
 #navigation > ul > li.has-sub > a { padding-right: 30px; }
 
 /*#navigation > ul > li.has-sub > a:after {
@@ -395,7 +395,7 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 #navigation.align-right ul ul ul { margin-left: 0; margin-right: 100%; }
 #navigation ul ul li a { border-bottom: 1px solid rgba(246, 241, 242, 1); padding: 16px 15px; width: 220px; font-size: 12px; text-decoration: none; color: #2b2528; font-weight: 400; background: #fff; }
 #navigation ul ul li:last-child > a, #navigation ul ul li.last-item > a { border-bottom: 0; }
-#navigation ul ul li:hover > a, #navigation ul ul li a:hover { color: #d37fb0; background-color: #fcfafb; }
+#navigation ul ul li:hover > a, #navigation ul ul li a:hover { color: #9c27b0; background-color: #fcfafb; }
 #navigation ul ul li.has-sub > a:after { position: absolute; top: 19px; right: 11px; width: 8px; height: 2px; display: block; background: #2b2528; content: ''; }
 #navigation.align-right ul ul li.has-sub > a:after { right: auto; left: 11px; }
 #navigation ul ul li.has-sub > a:before { position: absolute; top: 16px; right: 14px; display: block; width: 2px; height: 8px; background: #2b2528; content: ''; -webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease; }
@@ -584,7 +584,7 @@ background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.28) 7
 .related-post-content { border: 1px solid #f1ebef; padding: 26px; }
 
 /*----- Next Prev Post -----*/
-.next-prev-post { margin-bottom: 30px; }
+.next-prev-post { margin-bottom: 30px; margin-left: 60px; margin-right: 60px; }
 .prev-post { border: 1px solid #f1ebef; padding: 26px; }
 .next-post { border: 1px solid #f1ebef; padding: 26px; text-align: right; }
 .prev-link-title { margin-bottom: 10px; }
@@ -629,7 +629,7 @@ background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.28) 7
 11. Sidebar
  -----------------------*/
 .widget { padding: 28px; border: 1px solid #f1ebef; margin-bottom: 30px; background: #fdfafc; }
-.widget-title { border-bottom: 2px solid #d37fb0; display: inline-block; padding-bottom: 8px; text-transform: uppercase; font-size: 16px; letter-spacing: 2px; font-weight: 600; font-family: 'Karla', sans-serif; line-height: 1; margin-bottom: 30px; }
+.widget-title { border-bottom: 2px solid #9c27b0; display: inline-block; padding-bottom: 8px; text-transform: uppercase; font-size: 16px; letter-spacing: 2px; font-weight: 600; font-family: 'Karla', sans-serif; line-height: 1; margin-bottom: 30px; }
 .widget ul { padding: 0px; }
 .widget ul li { list-style: none; border-bottom: 1px solid #f1ebef; padding-bottom: 10px; padding-top: 10px; }
 .widget ul li:last-child { border-bottom: transparent; padding-bottom: 0px; padding-top: 10px; }
@@ -747,7 +747,7 @@ Media Query
 }
 .grid img {
     width: 360px;
-    height: 360px;
+    height: 300px;
 
 }
 /*//
@@ -816,14 +816,14 @@ h2.form-text{
 }
 
 .gallery{
-    margin:10px 50px;
+    margin:10px 20px;
 }
 
 .gallery img {
     transition: 1s;
-    padding: 15px;
-    width: 480px;
-    height: 360px;
+    padding: 5px;
+    width: 360px;
+    height: 280px;
 }
 
 .gallery img:hover {
