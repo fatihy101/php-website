@@ -59,3 +59,12 @@
 <script src="libs/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="libs/bootstrap.min.js"></script>
+
+<script>
+    // Bug holder: There's a bug about lightbox. This function prevents it.
+    $(function () {
+        $("a").on("click", function () {
+            $(".active").remove()
+        })
+    })
+</script>

@@ -116,14 +116,7 @@
     <?php require 'footer-default.html';?>
     <script src="js/lightbox-plus-jquery.min.js"></script>
 
-    <script>
-        // Bug holder: There's a bug about lightbox. This function prevents it.
-        $(function () {
-            $("a").on("click", function () {
-                $(".active").remove()
-            })
-        })
-    </script>
+  
 
 </body>
 

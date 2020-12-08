@@ -1,5 +1,5 @@
 $(function () {
-
+// AJAX'la çağır.
   $("#client-forms").on('click', function () {
     $("#main").empty()
     $("#main").load("tabs/clientForms.php")
@@ -23,6 +23,25 @@ $(function () {
   })
 
   $("#add-photo").on('click', function () {
+    $("#main").empty()
+    $("#main").load("tabs/addPhoto.php")
+
+  })
+
+  $("#add-venue").on('click', function () {
+    $("#main").empty()
+    $("#main").load("tabs/addPhoto.php")
+
+  })
+
+  $("#list-venues").on('click', function () {
+    $("#main").empty()
+    $("#main").load("tabs/addPhoto.php")
+
+  })
+
+
+  $("#edit-static").on('click', function () {
     $("#main").empty()
     $("#main").load("tabs/addPhoto.php")
 

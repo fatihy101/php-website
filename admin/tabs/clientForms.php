@@ -52,7 +52,6 @@ $client_forms = $conn->query($SQL);
 
 <script>
     feather.replace()
-    $(document).ready(refreshPage)
     
     function refreshPage(){
         $("#form_list").empty()
@@ -80,7 +79,9 @@ $client_forms = $conn->query($SQL);
 
     
      /*REFRESH ALL */
-     $(document).on('click', "#refresh_button", refreshPage)
+    $(document).on('click', "#refresh_button", refreshPage)
+    $(document).ready(refreshPage)
+     
 
     // Delete  a form
     $(document).on('click','.delete_button', function(event){
@@ -197,7 +198,7 @@ $client_forms = $conn->query($SQL);
         
     }); 
 
-/** else if(data.forms_count==0){
+    /** else if(data.forms_count==0){
                 $("#form_list").append("<div class='alert alert-warning mx-5' role='alert'>" +    
                 "Okunmamış mesajınız bulunmamaktadır.</div>");
                 $(".alert-warning").slideUp(2000)

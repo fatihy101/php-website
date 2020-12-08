@@ -109,13 +109,7 @@ box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class="b-header
         </div>
     </div>
     <?php require 'footer-default.html';?>
-    <script>
-        // Bug holder: There's a bug about lightbox. This function prevents it.
-        $(function () {
-            $("a").on("click", function () {
-                $(".active").remove()
-            })
-        })
+
     </script>
 </body>
 

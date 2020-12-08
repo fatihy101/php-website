@@ -29,9 +29,12 @@
     <div class="row">
       <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-theme-light sidebar collapse">
         <div class="sidebar-sticky pt-3">
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Genel</span>
+          </h6>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a id="client-forms" role="button"  class="nav-link">
+              <a id="client-forms" role="button" class="nav-link">
                 <i data-feather="mail"></i>
                 Gelen Mesajlar 
               </a>
@@ -49,12 +52,17 @@
               </a>
             </li>
 
+            <li class="nav-item">
+              <a id="edit-static" role="button" class="nav-link">
+                <i data-feather="aperture"></i>
+                Sabit Fotoğrafları Düzenle
+              </a>
+            </li>
+
           </ul>
 
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span>Galeri</span>
-            <a class="d-flex align-items-center text-muted" aria-label="Add a new report">
-            </a>
           </h6>
           <ul class="nav flex-column mb-2">
             <li class="nav-item">
@@ -71,7 +79,28 @@
             </li>
 
           </ul>
-        </div>
+      
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Salon</span>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a id="list-venues" role="button" class="nav-link">
+                <i data-feather="layers"></i>
+                Salonları Listele
+              </a>
+            </li>
+            <li class="nav-item">
+              <a id="add-venue" role="button"  class="nav-link">
+                <i data-feather="plus-circle"></i>
+                Salon Ekle
+              </a>
+            </li>
+
+          </ul>
+      
+      
+        </div>  
       </nav>
 
       <main id="main" role="main" class="mt-3 col-md-9 ml-sm-auto col-lg-10 px-md-4">
