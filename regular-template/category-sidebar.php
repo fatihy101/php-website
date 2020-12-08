@@ -22,7 +22,8 @@
             </div>
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="page-section">
-                    <h1 class="page-title">Category : Planning</h1></div>
+                    <h1 class="page-title">Category : Planning</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -44,7 +45,7 @@
 background: linear-gradient(90deg, rgba(162,0,255,1) 0%, rgba(117,11,186,1) 41%, rgba(156,39,176,1) 100%);
 , rgba(212,10,132,1) 79%, rgba(201,0,255,1) 100%); -webkit-box-shadow: -5px 8px 5px 0px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:    -5px 8px 5px 0px rgba(50, 50, 50, 0.75);
-box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class= "b-header">Salon 1</b></h2>
+box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class="b-header">Salon 1</b></h2>
                                     <hr />
                                     - 550 Kişi Oturma Kapasiteli<br />
                                     - Ses ve Işık Sistemi<br />
@@ -58,8 +59,8 @@ box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class= "b-heade
                                     - Taleplerinize bağlı olarak özel menü çeşitleri<br />
                                 </div>
                             </div>
-                           
-                             
+
+
                             <!-- /.post horizontal block end -->
                             <div class="row">
                                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
@@ -72,45 +73,34 @@ box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class= "b-heade
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="widget-bg widget-newsletter">
-                                <div class="">
-                                    <div class="newsletter-bg">
-                                        <h1>Google Adds için ayrılmıştır.</h1>
-                                        <p><br> </br></p>
-                                        <p><br> </br></p>
-                                        <p><br> </br></p>
-                                        <p><br> </br></p>
-                                        <form method="post" action="newsletter.php">
-                                            <!-- Text input-->
-                                            
-                                            <!-- Button -->
-                                            
-                                        </form>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="widget-bg widget-newsletter">
+                                    <div class="">
+                                        <div class="newsletter-bg">
+                                            <h1>Google Ads için ayrılmıştır.</h1>
+                                            <p><br> </br></p>
+                                            <p><br> </br></p>
+                                            <p><br> </br></p>
+                                            <p><br> </br></p>
+                                            <form method="post" action="newsletter.php">
+                                                <!-- Text input-->
+
+                                                <!-- Button -->
+
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- widget category start -->
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="widget widget-social">
                                 <!-- widget category start -->
-                                <h2 class="widget-title">Share with us</h2>
-                                <ul>
-                                    <li><a href="#">Facebook <i class="fa fa-facebook-square pull-right widget-social-icon"></i></a></li>
-                                    <li><a href="#">Twitter <i class="fa fa-twitter-square pull-right widget-social-icon"></i></a></li>
-                                    <li><a href="#">Instagram <i class="fa fa-instagram pull-right widget-social-icon"></i></a></li>
-                                    <li><a href="#">Google Plus <i class="fa fa-google-plus-square pull-right widget-social-icon"></i></a></li>
-                                    <li><a href="#">Pinterest <i class="fa fa-pinterest-square pull-right widget-social-icon"></i></a></li>
-                                </ul>
                             </div>
+
                             <!-- widget category start -->
-                        
+
                             <!-- widget category start -->
-                        
+
                             <!-- widget category start -->
-                        
+
                             <!-- widget category start -->
                         </div>
                     </div>
@@ -119,7 +109,14 @@ box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class= "b-heade
         </div>
     </div>
     <?php require 'footer-default.html';?>
-
+    <script>
+        // Bug holder: There's a bug about lightbox. This function prevents it.
+        $(function () {
+            $("a").on("click", function () {
+                $(".active").remove()
+            })
+        })
+    </script>
 </body>
 
 </html>

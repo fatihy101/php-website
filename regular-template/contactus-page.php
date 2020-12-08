@@ -15,8 +15,8 @@
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Contact us</li>
+                        <li><a href="index.php">Ana Sayfa</a></li>
+                        <li class="active">İLETİŞİM</li>
                     </ol>
                 </div>
             </div>
@@ -30,11 +30,12 @@
     <div class="content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                     <div class="row">
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                             <div class="section-header">
                                 <p class="lead">Merak ettiğiniz bir soru için bize mesaj bırakabilirsiniz.</p>
+                                <hr class="col-lg-8 col-sm-8 col-md-8 col-xs-8">
                             </div>
                         </div>
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
@@ -75,6 +76,7 @@
                                 </div>
                             </form>
                         </div>
+                        <hr class="col-lg-12 col-sm-8 col-md-8 col-xs-8">
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                             <div class="conatct-info">
                                 <div class="section-header">
@@ -115,6 +117,7 @@
                                 </div>
                             </div>
                         </div>
+                        <hr class="col-lg-12 col-sm-8 col-md-8 col-xs-8">
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                             <div class="section-header">
                                 <h2 class="heading-line">Konumumuz</h2>
@@ -128,137 +131,12 @@
                             width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
                             aria-hidden="false" tabindex="0"></iframe>
                     </p>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <hr class="col-lg-12 col-sm-8 col-md-8 col-xs-8">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="widget widget-categories">
-                                    <!-- widget category start -->
-                                    <h2 class="widget-title">categories</h2>
-                                    <ul>
-                                        <li><a href="#">Planning</a> <span class="badge">6</span></li>
-                                        <li><a href="#">Real Weddings</a><span class="badge">2</span></li>
-                                        <li><a href="#">Fashion</a><span class="badge">9</span></li>
-                                        <li><a href="#">Gallery</a><span class="badge">4</span></li>
-                                        <li><a href="#">Destinations</a><span class="badge">8</span></li>
-                                    </ul>
-                                </div>
-                                <!-- widget category start -->
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="widget-bg widget-newsletter">
-                                    <div class="">
-                                        <div class="newsletter-bg">
-                                            <h1>Size en güzel evlilik planlarını sunabilmek için</h1>
-                                            <p>Aşağıdaki kutucuğa mail adresinizi bırakabilrisiniz.</p>
-                                            <form method="post" action="newsletter.php">
-                                                <!-- Text input-->
-                                                <div class="form-group">
-                                                    <label class="sr-only  control-label" for="e-mail">E-Mail</label>
-                                                    <input id="e-mail" name="e-mail" type="text"
-                                                        placeholder="Email Address" class="form-control input-md"
-                                                        required="">
-                                                </div>
-                                                <!-- Button -->
-                                                <div class="form-group">
-                                                    <label class="sr-only control-label" for="submit">Submit</label>
-                                                    <button id="submit" name="submit"
-                                                        class="btn btn-default">Submit</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- widget category start -->
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="widget widget-social">
-                                    <!-- widget category start -->
-                                    <h2 class="widget-title">Share with us</h2>
-                                    <ul>
-                                        <li><a href="#">Facebook <i
-                                                    class="fa fa-facebook-square pull-right widget-social-icon"></i></a>
-                                        </li>
-                                        <li><a href="#">Twitter <i
-                                                    class="fa fa-twitter-square pull-right widget-social-icon"></i></a>
-                                        </li>
-                                        <li><a href="#">Instagram <i
-                                                    class="fa fa-instagram pull-right widget-social-icon"></i></a></li>
-                                        <li><a href="#">Google Plus <i
-                                                    class="fa fa-google-plus-square pull-right widget-social-icon"></i></a>
-                                        </li>
-                                        <li><a href="#">Pinterest <i
-                                                    class="fa fa-pinterest-square pull-right widget-social-icon"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- widget category start -->
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="widget widget-recent-news">
-                                    <!-- widget category start -->
-                                    <h2 class="widget-title">SON YENİLİKLER</h2>
-                                    <ul>
-                                        <li>
-                                            <h4><a href="#" class="post-title">Vegan Breakfasts: Baked Eggs in Popped
-                                                    Beans and Cherry</a></h4>
-                                            <p class="meta"><span class="meta-category"><a href="#"
-                                                        class="meta-link">Destinations</a></span> <span
-                                                    class="meta-date">19 Jan, 2017</span>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h4><a href="#" class="post-title">Gluten Free Vegan Apple Pie</a></h4>
-                                            <p class="meta"><span class="meta-category"><a href="#"
-                                                        class="meta-link">Real Weddings</a></span> <span
-                                                    class="meta-date">19 Jan, 2017</span>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h4><a href="#" class="post-title"> 10 Ways in Which Vegans Save the Earth
-                                                    Each</a></h4>
-                                            <p class="meta"><span class="meta-category"><a href="#"
-                                                        class="meta-link">Planning</a></span> <span class="meta-date">19
-                                                    Jan, 2017</span>
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- widget category start -->
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="widget widget-tags">
-                                    <!-- widget category start -->
-                                    <h2 class="widget-title">Tags</h2>
-                                    <div class="tags">
-                                        <a href="#">Wedding</a>
-                                        <a href="#">Wedding dress</a>
-                                        <a href="#">planning</a>
-                                        <a href="#">venue</a>
-                                        <a href="#">destinations</a>
-                                        <a href="#">beauty</a>
-                                        <a href="#">Wedding planning</a>
-                                    </div>
-                                </div>
-                                <!-- widget category start -->
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="widget widget-archive">
-                                    <!-- widget category start -->
-                                    <h2 class="widget-title">ARŞİV</h2>
-                                    <ul>
-                                        <li><a href="#">June 2018</a></li>
-                                        <li><a href="#">March 2018</a></li>
-                                        <li><a href="#">February 2018</a></li>
-                                        <li><a href="#">January 2018</a></li>
-                                    </ul>
-                                </div>
-                                <!-- widget category start -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <br></br>
+                        
+                            
         <?php require 'footer-default.html';?>
 
 </body>
