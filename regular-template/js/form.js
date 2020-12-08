@@ -32,6 +32,7 @@ $(document).ready(function () {
                                 showConfirmButton: false,
                                 timer: 1500
                             })
+                            $(".myForm").remove();
                         }) //end of slideUp callback function
                     } else {
                         Swal.fire({

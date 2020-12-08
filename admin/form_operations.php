@@ -2,7 +2,7 @@
 // TODO: check the session
 $data = array(); 
 // DELETE
-if($_POST["delete"] == "yes")
+if(isset($_POST["delete"]))
 {
     $id = intval($_POST["id"]);
 
@@ -24,7 +24,7 @@ if($_POST["delete"] == "yes")
 }
 
 // ARCHIVE
-if($_POST["archive_it"] == "yes")
+if(isset($_POST["archive_it"]))
 {
     $id = intval($_POST["id"]);
 
@@ -46,7 +46,7 @@ if($_POST["archive_it"] == "yes")
 }
 
 // UNARCHIVE
-if($_POST["unarchive_it"] == "yes")
+if(isset($_POST["unarchive_it"]))
 {
     $id = intval($_POST["id"]);
 
@@ -68,7 +68,7 @@ if($_POST["unarchive_it"] == "yes")
 }
 
 // HAS READ
-if($_POST["has_read"] == "yes")
+if(isset($_POST["has_read"]))
 {
     $id = intval($_POST["id"]);
 
@@ -90,7 +90,7 @@ if($_POST["has_read"] == "yes")
 }
 
 
-if($_POST["update_form_unreads"]=="yes")
+if(isset($_POST["update_form_unreads"]))
 {
     require_once('config.php');
     $SQL = "SELECT * FROM wedpress.Forms ORDER BY datetime DESC;";
@@ -150,7 +150,7 @@ if($_POST["update_form_unreads"]=="yes")
     
 }
 
-if($_POST["update_form_archived"]=="yes")
+if(isset($_POST["update_form_archived"]))
 {
     $formatted_forms = array();
     require_once('config.php');
@@ -214,7 +214,7 @@ if($_POST["update_form_archived"]=="yes")
     
 }
 
-if($_POST["refresh"]=="yes"){
+if(isset($_POST["refresh"])){
 
     $formatted_forms = array();
     require_once('config.php');
