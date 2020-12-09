@@ -8,7 +8,7 @@ if(isset($_POST["delete"]))
 
     require_once('config.php');
 
-    $SQL="DELETE FROM wedpress.Forms WHERE id =$id"; 
+    $SQL="DELETE FROM Forms WHERE id =$id"; 
 
     if ($conn->query($SQL) === TRUE) {
         $data['success'] = true;
@@ -30,7 +30,7 @@ if(isset($_POST["archive_it"]))
 
     require_once('config.php');
 
-    $SQL="UPDATE wedpress.Forms SET archive = 1, has_read = 1  WHERE id =$id"; 
+    $SQL="UPDATE Forms SET archive = 1, has_read = 1  WHERE id =$id"; 
    
     if ($conn->query($SQL) === TRUE) {
         $data['success'] = true;
@@ -52,7 +52,7 @@ if(isset($_POST["unarchive_it"]))
 
     require_once('config.php');
 
-    $SQL="UPDATE wedpress.Forms SET archive = 0 WHERE id =$id"; 
+    $SQL="UPDATE Forms SET archive = 0 WHERE id =$id"; 
    
     if ($conn->query($SQL) === TRUE) {
         $data['success'] = true;
@@ -74,7 +74,7 @@ if(isset($_POST["has_read"]))
 
     require_once('config.php');
 
-    $SQL="UPDATE wedpress.Forms SET has_read = 1 WHERE id =$id"; 
+    $SQL="UPDATE Forms SET has_read = 1 WHERE id =$id"; 
    
     if ($conn->query($SQL) === TRUE) {
         $data['success'] = true;
@@ -93,7 +93,7 @@ if(isset($_POST["has_read"]))
 if(isset($_POST["update_form_unreads"]))
 {
     require_once('config.php');
-    $SQL = "SELECT * FROM wedpress.Forms ORDER BY datetime DESC;";
+    $SQL = "SELECT * FROM Forms ORDER BY datetime DESC;";
     $forms = $conn->query($SQL);
     // normal şartlarda 0 da dönebilir
     if ($forms->num_rows > 0) {
@@ -154,7 +154,7 @@ if(isset($_POST["update_form_archived"]))
 {
     $formatted_forms = array();
     require_once('config.php');
-    $SQL = "SELECT * FROM wedpress.Forms ORDER BY datetime DESC;";
+    $SQL = "SELECT * FROM Forms ORDER BY datetime DESC;";
     $forms = $conn->query($SQL);
     // normal şartlarda 0 da dönebilir
     if ($forms->num_rows > 0) {
@@ -218,7 +218,7 @@ if(isset($_POST["refresh"])){
 
     $formatted_forms = array();
     require_once('config.php');
-    $SQL = "SELECT * FROM wedpress.Forms ORDER BY datetime DESC;";
+    $SQL = "SELECT * FROM Forms ORDER BY datetime DESC;";
     $forms = $conn->query($SQL);
 
     while($form = mysqli_fetch_array($forms)) { 

@@ -34,26 +34,26 @@
           </h6>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a id="client-forms" role="button" class="nav-link">
+              <a id="client-forms" role="button" class="nav-link side-button">
                 <i data-feather="mail"></i>
                 Gelen Mesajlar 
               </a>
             </li>
             <li class="nav-item">
-              <a id="new-post" role="button" class="nav-link ">
+              <a id="new-post" role="button" class="nav-link side-button ">
                 <i data-feather="file-plus"></i>
                 Yeni Gönderi Yayınla
               </a>
             </li>
             <li class="nav-item">
-              <a id="old-posts" role="button" class="nav-link">
+              <a id="old-posts" role="button" class="nav-link side-button">
                 <i data-feather="archive"></i>
                 Yayınlanmış Gönderiler
               </a>
             </li>
 
             <li class="nav-item">
-              <a id="edit-static" role="button" class="nav-link">
+              <a id="edit-static" role="button" class="nav-link side-button">
                 <i data-feather="aperture"></i>
                 Sabit Fotoğrafları Düzenle
               </a>
@@ -66,13 +66,13 @@
           </h6>
           <ul class="nav flex-column mb-2">
             <li class="nav-item">
-              <a id="gallery" role="button" class="nav-link">
+              <a id="gallery" role="button" class="nav-link side-button">
                 <i data-feather="crop"></i>
                 Galeriyi Yönet
               </a>
             </li>
             <li class="nav-item">
-              <a id="add-photo" role="button"  class="nav-link">
+              <a id="add-photo" role="button"  class="nav-link side-button">
                 <i data-feather="plus"></i>
                 Fotoğraf Ekle
               </a>
@@ -85,13 +85,13 @@
           </h6>
           <ul class="nav flex-column mb-2">
             <li class="nav-item">
-              <a id="list-venues" role="button" class="nav-link">
+              <a id="list-venues" role="button" class="nav-link side-button">
                 <i data-feather="layers"></i>
                 Salonları Listele
               </a>
             </li>
             <li class="nav-item">
-              <a id="add-venue" role="button"  class="nav-link">
+              <a id="add-venue" role="button"  class="nav-link side-button">
                 <i data-feather="plus-circle"></i>
                 Salon Ekle
               </a>

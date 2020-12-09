@@ -123,10 +123,12 @@ body {
 
 .theme-color {
   background-color: #9a5e8e;
+  color: white;
 }
 
 .theme-color-dark{
   background-color: #885888;
+  color: white;
 }
 
 #sign-out-button{

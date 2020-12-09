@@ -12,7 +12,7 @@ $username = "root";
 $password = "example";
 $db = "wedpress";
 
-$conn = new mysqli($servername, $username, $password, $wedpress);
+$conn = new mysqli($servername, $username, $password, $db);
 
 
 // Set the timezone-->  SET GLOBAL time_zone = '+03:00';

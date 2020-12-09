@@ -4,7 +4,7 @@ $username = "root";
 $password = "example";
 $db = "wedpress";
 
-$conn = new mysqli($servername, $username, $password, $wedpress);
+$conn = new mysqli($servername, $username, $password, $db);
 
 
 // Set the timezone-->  SET GLOBAL time_zone = '+03:00';
@@ -44,7 +44,7 @@ else
   $message = $conn -> real_escape_string($_POST["textarea"]);
 
 
-  $sql = "INSERT INTO wedpress.Forms (email, message, name, surname, datetime)
+  $sql = "INSERT INTO Forms (email, message, name, surname, datetime)
   VALUES ('$email', '$message', '$name', '$surname', NOW())";
 
 
