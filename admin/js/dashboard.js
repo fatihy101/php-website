@@ -13,7 +13,7 @@ $(function () {
         el.slideUp(800)
       }
     })
-   
+   //TODO: line 11, change.
   })
 
   $("#new-post").on('click', function () {
