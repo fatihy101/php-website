@@ -11,7 +11,7 @@
                     <div class="input-group">
                         <span class="input-group-btn">
                             <span class="btn theme-color btn-file text-white">
-                                Fotoğraf yükle... <input type="file" id="imgInp">
+                                Fotoğrafı seç... <input type="file" id="imgInp">
                             </span>
                         </span>
                         <input type="text" class="form-control" readonly>
@@ -34,9 +34,11 @@
   
   </div>
 
+  <script src="js/uploadFile.js" defer></script>
 
 <script>
     // Summernote + file upload button
+    feather.replace()
     $(document).ready( function() {
         $('#summernote').summernote({
             placeholder: 'Gönderinizi buraya yazınız...',
@@ -52,41 +54,7 @@
             ['height', ['height']]
         ]   
         });
-
-
-    	$(document).on('change', '.btn-file :file', function() {
-		var input = $(this),
-			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-		input.trigger('fileselect', [label]);
-		});
-
-		$('.btn-file :file').on('fileselect', function(event, label) {
-		    
-		    var input = $(this).parents('.input-group').find(':text'),
-		        log = label;
-		    
-		    if( input.length ) {
-		        input.val(log);
-		    } else {
-		        if( log ) alert(log);
-		    }
-	    
-		});
-		function readURL(input) {
-		    if (input.files && input.files[0]) {
-		        var reader = new FileReader();
-		        
-		        reader.onload = function (e) {
-		            $('#img-upload').attr('src', e.target.result);
-		        }
-		        
-		        reader.readAsDataURL(input.files[0]);
-		    }
-		}
-
-		$("#imgInp").change(function(){
-		    readURL(this);
-		}); 	
+    
 	});
 </script>
 

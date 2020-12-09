@@ -34,12 +34,12 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="https://www.modernwedding.com.au/wp-content/uploads/2020/07/28/Anna-Wang.jpg"
-                                alt="..." style="height:600px; width:1400px;">
+                            <img  src="https://www.modernwedding.com.au/wp-content/uploads/2020/07/28/Anna-Wang.jpg"
+                                alt="..." style="height:600px; width:1400px;pointer-events:none;">
                         </div>
                         <div class="item">
-                            <img src="https://s3.amazonaws.com/busites_www/mvkeywestresort/subpage_banners_weddings_1506952002.jpg"
-                                alt="..." style="height:600px; width:1400px;">
+                            <img  src="https://s3.amazonaws.com/busites_www/mvkeywestresort/subpage_banners_weddings_1506952002.jpg"
+                                alt="..." style="height:600px; width:1400px;pointer-events:none;">
                         </div>
                         <br>
                     </div>
@@ -96,7 +96,7 @@
                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                     <div class="section-header">
                         <h2 class="heading-line">Son Paylaşımlar</h2>
-                        <a href="#" class="btn btn-default btn-xs pull-right"> SEE ALL POSTS</a>
+                        <a href="#" class="btn btn-default btn-xs pull-right"> Tüm Gönderileri Gör</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
@@ -111,7 +111,7 @@
                                     2017</span>
                             </p>
                             <p>Rhoncus sed eros ipsum consequt act orci semper interdum elit.</p>
-                            <a href="#" class="btn-link">Read More..</a>
+                            <a href="#" class="btn-link">Devamını Oku</a>
                         </div>
                     </div>
                     <!-- /.post vertical block -->
@@ -129,7 +129,7 @@
                                     2017</span>
                             </p>
                             <p>Tempor odio sed vehicula ornare libero eivamusd donec sodales etios.</p>
-                            <a href="#" class="btn-link">Read More..</a>
+                            <a href="#" class="btn-link">Devamını Oku</a>
                         </div>
                     </div>
                     <!-- /.post vertical block -->
@@ -147,7 +147,7 @@
                             </p>
                             <p>Rhoncus sed eros ipsum consequat ac orci
                                 semper interdum sed elit.</p>
-                            <a href="#" class="btn-link">Read More..</a>
+                            <a href="#" class="btn-link">Devamını Oku</a>
                         </div>
                     </div>
                     <!-- /.post vertical block -->
