@@ -41,7 +41,7 @@
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                             <form class="contact-form" action="insert-form.php" method="post">
                                 <div class="row">
-                                    
+
                                     <div class="col-md-6">
                                         <!-- Text input-->
                                         <div class="form-group">
@@ -52,15 +52,15 @@
                                     </div>
                                     <!-- Text input-->
                                     <div class="form-group col-md-6">
-                                            <label class="control-label" for="surname">Soyad<span>*</span></label>
-                                            <input id="surname" name="surname" type="text" placeholder="Soyadınız"
-                                                class="form-control input-md" required>                                   
+                                        <label class="control-label" for="surname">Soyad<span>*</span></label>
+                                        <input id="surname" name="surname" type="text" placeholder="Soyadınız"
+                                            class="form-control input-md" required>
                                     </div>
                                     <!-- Text input-->
                                     <div class="form-group col-md-12">
-                                            <label class="control-label" for="email">E-posta<span>*</span></label>
-                                            <input id="email" name="email" type="text" placeholder="epostam@adres.com"
-                                               class="form-control input-md" required>
+                                        <label class="control-label" for="email">E-posta<span>*</span></label>
+                                        <input id="email" name="email" type="text" placeholder="epostam@adres.com"
+                                            class="form-control input-md" required>
                                     </div>
                                     <!--textarea-->
                                     <div class="col-md-12">
@@ -70,8 +70,7 @@
                                     </div>
                                     <!--Button-->
                                     <div class="form-group col-md-12">
-                                            <button id="submit" name="submit"
-                                                class="btn btn-default">Gönder</button>
+                                        <button id="submit" name="submit" class="btn btn-default">Gönder</button>
                                     </div>
                                 </div>
                             </form>
@@ -135,9 +134,16 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="row">
                             <br></br>
-                        
-                            
-        <?php require 'footer-default.html';?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <?php require 'footer-default.html';?>
 
 </body>
 

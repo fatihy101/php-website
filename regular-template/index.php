@@ -1,3 +1,11 @@
+<?php 
+require_once("config.php");
+$SQL = "SELECT * FROM Article ORDER BY article_no DESC LIMIT 3;";
+$articles = $conn->query($SQL);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet">
     <!-- owl Carousel Css -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    
+
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
     <script src="js/form.js"></script>
@@ -34,12 +42,12 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img  src="https://www.modernwedding.com.au/wp-content/uploads/2020/07/28/Anna-Wang.jpg"
-                                alt="..." style="height:600px; width:1400px;pointer-events:none;">
+                            <img src="https://www.modernwedding.com.au/wp-content/uploads/2020/07/28/Anna-Wang.jpg"
+                                style="height:600px; width:1400px;pointer-events:none;">
                         </div>
                         <div class="item">
-                            <img  src="https://s3.amazonaws.com/busites_www/mvkeywestresort/subpage_banners_weddings_1506952002.jpg"
-                                alt="..." style="height:600px; width:1400px;pointer-events:none;">
+                            <img src="https://s3.amazonaws.com/busites_www/mvkeywestresort/subpage_banners_weddings_1506952002.jpg"
+                                style="height:600px; width:1400px;pointer-events:none;">
                         </div>
                         <br>
                     </div>
@@ -60,25 +68,25 @@
                         <div class="row">
                             <div class="form-group col-md-5">
                                 <label for="name" class="control-label form-text">AD</label>
-                                <input type="text" class="form-control" name="name" 
-                                placeholder="Adınız" required />
+                                <input type="text" class="form-control" name="name" placeholder="Adınız" required />
                             </div>
 
                             <div class="form-group col-md-5">
                                 <label for="surname" class="control-label form-text">SOYAD</label>
-                                <input type="text" class="form-control" name="surname"
-                                    placeholder="Soyadınız" required ></input>
+                                <input type="text" class="form-control" name="surname" placeholder="Soyadınız"
+                                    required></input>
                             </div>
-                            
+
                             <div class="col-md-12">
                                 <label class="control-label form-text" for="textarea">MESAJ</label>
                                 <textarea class="form-control" id="textarea" name="textarea" rows="3"
-                                     placeholder="Mesajınızı buraya bırakabilirsiniz." required></textarea>
+                                    placeholder="Mesajınızı buraya bırakabilirsiniz." required></textarea>
                             </div>
 
                             <div class="form-group col-md-8">
-                                    <label class="control-label form-text" for="email">E-POSTA</label>
-                                    <input id="email" name="email" type="email" placeholder="epostam@adres.com" class="form-control input-md" required>
+                                <label class="control-label form-text" for="email">E-POSTA</label>
+                                <input id="email" name="email" type="email" placeholder="epostam@adres.com"
+                                    class="form-control input-md" required>
                             </div>
                             <div class="form-group col-md-10">
                                 <button id="submit" name="submit" class="btn btn-default">Gönder</button>
@@ -90,6 +98,7 @@
     </div>
     <!-- big post center -->
     </div>
+
     <div class="space-medium">
         <div class="container">
             <div class="row">
@@ -99,62 +108,32 @@
                         <a href="#" class="btn btn-default btn-xs pull-right"> Tüm Gönderileri Gör</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
-                    <div class="post-vertical-block">
+               
+                    <?php while($article = mysqli_fetch_array($articles))
+                    {
+                        $first_words = implode(' ', array_slice(explode(' ', $article["paragraph"]), 0, 8));
+
+                        echo " <div class='col-lg-4 col-sm-4 col-md-6 col-xs-12'>
+                        <div class='post-vertical-block'>
                         <!-- post vertical block -->
-                        <div class="featured-img">
-                            <a href="#" class="imagehover"><img src="images/post-horizontal-img-4.jpg" alt=""></a>
+                        <div class='featured-img'>
+                            <a href='gonderi.php?article_no=".$article["article_no"]."' class='imagehover'><img src='".$article["image_dir"]."' alt=''></a>
                         </div>
-                        <div class="post-vertical-content">
-                            <h2><a href="#" class="post-title">Are You Just Engaged Tip for Wedding in 2017</a></h2>
-                            <p class="meta"> <span class="meta-date">19 Jan,
-                                    2017</span>
+                        <div class='post-vertical-content'>
+                            <h2><a href='gonderi.php?article_no=".$article["article_no"]."' class='post-title'>".$article["title"]."</a></h2>
+                            <p class='meta'> <span class='meta-date'>". $article["date"]."</span>
                             </p>
-                            <p>Rhoncus sed eros ipsum consequt act orci semper interdum elit.</p>
-                            <a href="#" class="btn-link">Devamını Oku</a>
+                           ".$first_words.'...'."<br>
+                                <a href='gonderi.php?article_no=".$article["article_no"]."' class='btn-link'>Devamını Oku</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- /.post vertical block -->
-                </div>
-                <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
-                    <div class="post-vertical-block">
-                        <!-- post vertical block -->
-                        <div class="featured-img">
-                            <a href="#" class="imagehover"><img src="images/post-horizontal-img-2.jpg" alt=""></a>
-                        </div>
-                        <div class="post-vertical-content">
-                            <h2><a href="#" class="post-title">Best 20+ Real Wedding Couple Inspiration for 2017</a>
-                            </h2>
-                            <p class="meta"> <span class="meta-date">19 Jan,
-                                    2017</span>
-                            </p>
-                            <p>Tempor odio sed vehicula ornare libero eivamusd donec sodales etios.</p>
-                            <a href="#" class="btn-link">Devamını Oku</a>
-                        </div>
-                    </div>
-                    <!-- /.post vertical block -->
-                </div>
-                <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12">
-                    <div class="post-vertical-block">
-                        <!-- post vertical block -->
-                        <div class="featured-img">
-                            <a href="#" class="imagehover"><img src="images/post-horizontal-img-3.jpg" alt=""></a>
-                        </div>
-                        <div class="post-vertical-content">
-                            <h2><a href="#" class="post-title">Are You Just Engaged Tip
-                                    for Wedding in 2017</a></h2>
-                            <p class="meta"> <span class="meta-date">19 Jan, 2017</span>
-                            </p>
-                            <p>Rhoncus sed eros ipsum consequat ac orci
-                                semper interdum sed elit.</p>
-                            <a href="#" class="btn-link">Devamını Oku</a>
-                        </div>
-                    </div>
-                    <!-- /.post vertical block -->
-                </div>
+                        <!-- /.post vertical block -->
+                        </div>";
+                    }?>     
+                
             </div>
-        </div>  
-   
+        </div>
+    </div>
     <?php require 'footer-default.html';?>
     <!-- slider script -->
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>

@@ -1,10 +1,6 @@
 <?php 
 require_once("../config.php");
 
-$SQL = "SELECT * FROM wedpress.Forms ORDER BY datetime DESC;";
-
-$client_forms = $conn->query($SQL);
-
 // TODO: unarchive
 ?>
 <!--Top-->
