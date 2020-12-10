@@ -2,8 +2,6 @@
 require_once("config.php");
 $SQL = "SELECT * FROM Article ORDER BY article_no DESC LIMIT 3;";
 $articles = $conn->query($SQL);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -105,7 +103,7 @@ $articles = $conn->query($SQL);
                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                     <div class="section-header">
                         <h2 class="heading-line">Son Paylaşımlar</h2>
-                        <a href="#" class="btn btn-default btn-xs pull-right"> Tüm Gönderileri Gör</a>
+                        <a href="tum-gonderiler.php" class="btn btn-default btn-xs pull-right"> Tüm Gönderileri Gör</a>
                     </div>
                 </div>
                

@@ -1,3 +1,9 @@
+<?php 
+require_once("config.php");
+$SQL = "SELECT * FROM Article ORDER BY article_no DESC;";
+$articles = $conn->query($SQL);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,14 +19,10 @@
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li class="active">Category 3 Column</li>
+                        <li><a href="index.php">Ana Sayfa</a></li>
+                        <li class="active">Tüm Gönderiler</li>
                     </ol>
                 </div>
-            </div>
-            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                <div class="page-section">
-                    <h1 class="page-title">Category : Planning</h1></div>
             </div>
         </div>
     </div>
@@ -29,102 +31,26 @@
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                     <div class="row">
-                        <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
-                            <div class="post-vertical-block">
-                                <!-- post vertical block -->
-                                <div class="featured-img">
-                                    <a href="#" class="imagehover"><img src="images/post-horizontal-img-1.jpg" alt=""></a>
-                                </div>
-                                <div class="post-vertical-content">
-                                    <h2><a href="#" class="post-title">10 Tips for Planning a Destination Wedding in 2017</a></h2>
-                                    <p class="meta"><span class="meta-category"><a href="#" class="meta-link">Planning</a></span> <span class="meta-date">19 Jan, 2017</span> <span class="meta-comments">(23) <a href="#" class="meta-link">Comments</a></span>
-                                    </p>
-                                    <p>Massa donec tristique non neque id eleifend act scelerisque tortor.</p>
-                                    <a href="#" class="btn-link">Read More..</a>
-                                </div>
-                            </div>
-                            <!-- /.post vertical block -->
+                        <?php while($article = mysqli_fetch_array($articles)){
+                        $first_words = implode(' ', array_slice(explode(' ', $article["paragraph"]), 0, 8));
+
+                        echo " <div class='col-lg-4 col-sm-4 col-md-6 col-xs-12'>
+                        <div class='post-vertical-block'>
+                        <!-- post vertical block -->
+                        <div class='featured-img'>
+                            <a href='gonderi.php?article_no=".$article["article_no"]."' class='imagehover'><img src='".$article["image_dir"]."' alt=''></a>
                         </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
-                            <div class="post-vertical-block">
-                                <!-- post vertical block -->
-                                <div class="featured-img">
-                                    <a href="#" class="imagehover"><img src="images/post-horizontal-img-2.jpg" alt=""></a>
-                                </div>
-                                <div class="post-vertical-content">
-                                    <h2><a href="#" class="post-title">Everything Need to Know About Destination Weddings</a></h2>
-                                    <p class="meta"><span class="meta-category"><a href="#" class="meta-link">Planning</a></span> <span class="meta-date">19 Jan, 2017</span> <span class="meta-comments">(23) <a href="#" class="meta-link">Comments</a></span>
-                                    </p>
-                                    <p>Massa donec tristique non neque id eleifend act scelerisque tortor.</p>
-                                    <a href="#" class="btn-link">Read More..</a>
-                                </div>
+                        <div class='post-vertical-content'>
+                            <h2><a href='gonderi.php?article_no=".$article["article_no"]."' class='post-title'>".$article["title"]."</a></h2>
+                            <p class='meta'> <span class='meta-date'>". $article["date"]."</span>
+                            </p>
+                           ".$first_words.'...'."<br>
+                                <a href='gonderi.php?article_no=".$article["article_no"]."' class='btn-link'>Devamını Oku</a>
                             </div>
-                            <!-- /.post vertical block -->
                         </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
-                            <div class="post-vertical-block">
-                                <!-- post vertical block -->
-                                <div class="featured-img">
-                                    <a href="#" class="imagehover"><img src="images/post-horizontal-img-5.jpg" alt=""></a>
-                                </div>
-                                <div class="post-vertical-content">
-                                    <h2><a href="#" class="post-title">10 Tips for Planning a Destination Wedding in 2017</a></h2>
-                                    <p class="meta"><span class="meta-category"><a href="#" class="meta-link">Planning</a></span> <span class="meta-date">19 Jan, 2017</span> <span class="meta-comments">(23) <a href="#" class="meta-link">Comments</a></span>
-                                    </p>
-                                    <p>Massa donec tristique non neque id eleifend act scelerisque tortor.</p>
-                                    <a href="#" class="btn-link">Read More..</a>
-                                </div>
-                            </div>
-                            <!-- /.post vertical block -->
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
-                            <div class="post-vertical-block">
-                                <!-- post vertical block -->
-                                <div class="featured-img">
-                                    <a href="#" class="imagehover"><img src="images/post-horizontal-img-4.jpg" alt=""></a>
-                                </div>
-                                <div class="post-vertical-content">
-                                    <h2><a href="#" class="post-title">Everything Need to Know About Destination Weddings</a></h2>
-                                    <p class="meta"><span class="meta-category"><a href="#" class="meta-link">Planning</a></span> <span class="meta-date">19 Jan, 2017</span> <span class="meta-comments">(23) <a href="#" class="meta-link">Comments</a></span>
-                                    </p>
-                                    <p>Massa donec tristique non neque id eleifend act scelerisque tortor.</p>
-                                    <a href="#" class="btn-link">Read More..</a>
-                                </div>
-                            </div>
-                            <!-- /.post vertical block -->
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
-                            <div class="post-vertical-block">
-                                <!-- post vertical block -->
-                                <div class="featured-img">
-                                    <a href="#" class="imagehover"><img src="images/post-horizontal-img-3.jpg" alt=""></a>
-                                </div>
-                                <div class="post-vertical-content">
-                                    <h2><a href="#" class="post-title">10 Tips for Planning a Destination Wedding in 2017</a></h2>
-                                    <p class="meta"><span class="meta-category"><a href="#" class="meta-link">Planning</a></span> <span class="meta-date">19 Jan, 2017</span> <span class="meta-comments">(23) <a href="#" class="meta-link">Comments</a></span>
-                                    </p>
-                                    <p>Massa donec tristique non neque id eleifend act scelerisque tortor.</p>
-                                    <a href="#" class="btn-link">Read More..</a>
-                                </div>
-                            </div>
-                            <!-- /.post vertical block -->
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
-                            <div class="post-vertical-block">
-                                <!-- post vertical block -->
-                                <div class="featured-img">
-                                    <a href="#" class="imagehover"><img src="images/post-horizontal-img-1.jpg" alt=""></a>
-                                </div>
-                                <div class="post-vertical-content">
-                                    <h2><a href="#" class="post-title">Everything Need to Know About Destination Weddings</a></h2>
-                                    <p class="meta"><span class="meta-category"><a href="#" class="meta-link">Planning</a></span> <span class="meta-date">19 Jan, 2017</span> <span class="meta-comments">(23) <a href="#" class="meta-link">Comments</a></span>
-                                    </p>
-                                    <p>Massa donec tristique non neque id eleifend act scelerisque tortor.</p>
-                                    <a href="#" class="btn-link">Read More..</a>
-                                </div>
-                            </div>
-                            <!-- /.post vertical block -->
-                        </div>
+                        <!-- /.post vertical block -->
+                        </div>";
+                    }?>
                     </div>
                 </div>
             </div>
@@ -132,7 +58,7 @@
     </div>
     <?php require 'footer-default.html';?>
 
-   
+
 </body>
 
 </html>
