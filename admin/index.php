@@ -121,7 +121,6 @@
   <!--  jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="libs/jquery.min.js"></script>
   <script src="libs/bootstrap.min.js"></script>
-  <script src="js/dashboard.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <script>
     feather.replace()

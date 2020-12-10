@@ -1,5 +1,4 @@
 $(function () {
-// AJAX'la çağır.
   $("#client-forms").on('click', function () {
     var el = $(this)
     $.ajax({
@@ -8,12 +7,12 @@ $(function () {
       dataType: "html",
       success: function (response) {
         $("#main").empty()
-        $("#main").load("tabs/clientForms.php")
+        $("#main").html(response)
         $(".side-button").slideDown(1600)
         el.slideUp(800)
       }
     })
-   //TODO: line 11, change.
+    
   })
 
   $("#new-post").on('click', function () {
