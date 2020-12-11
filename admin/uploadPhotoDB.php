@@ -28,8 +28,7 @@ if(isset($_POST['upload_btn'])){
         echo "Error: " . $SQL . "<br>" . $conn->error;
       }
   
-    // Upload file
-    move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
+    
   }
  
 }
