@@ -75,13 +75,13 @@ $articles = $conn->query($SQL);
                                     required></input>
                             </div>
 
-                            <div class="col-md-12">
+                            <div class="col-md-11">
                                 <label class="control-label form-text" for="textarea">MESAJ</label>
                                 <textarea class="form-control" id="textarea" name="textarea" rows="3"
                                     placeholder="Mesajınızı buraya bırakabilirsiniz." required></textarea>
                             </div>
 
-                            <div class="form-group col-md-8">
+                            <div class="form-group col-md-11">
                                 <label class="control-label form-text" for="email">E-POSTA</label>
                                 <input id="email" name="email" type="email" placeholder="epostam@adres.com"
                                     class="form-control input-md" required>
