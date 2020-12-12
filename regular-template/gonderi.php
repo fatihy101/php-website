@@ -39,7 +39,7 @@ $article = mysqli_fetch_array($conn->query($SQL));
     <div class="content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12"><img id="article_photo" src="<?php echo $article["image_dir"]; ?>"
+                <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12"><img id="article_photo" src="<?php echo $article["photo"]; ?>"
                         alt=""></div>
                 <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 article_body">
                     <?php echo $article["paragraph"]; ?> 

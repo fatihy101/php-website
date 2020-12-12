@@ -5,8 +5,8 @@ $results = $conn->query($SQL);
 ?>
 
 <div class=" row d-flex ju,stify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h2 class="h3 col">Galeri </h2> <p class="mr-5 text-muted ">Not: Sıra numarası yüksek olan, en üstte görünür. </p>
-        <button class="btn theme-color"><i data-feather="check"></i> Değişiklikleri Kaydet</button>
+        <h2 class="h3 col">Galeri </h2> <p class="mr-5 text-muted "><b>Not:</b> Sıra numarası <b>düşük</b> olan, en üstte görünür. </p>
+        <button id="refresh-button" class="btn theme-color" ><i data-feather="repeat"></i> Yenile</button>
 </div>
 <br>
 <div class="container">
@@ -17,8 +17,8 @@ $results = $conn->query($SQL);
                 <img src="<?php echo $result['photo'];?>" class="card-img-top">
                 <div class="card-body">
                     <div class="input-group">
-                        <button type="button" class="btn btn-sm btn-danger" data-field="<?php echo $result["id"]; ?>"><i data-feather="x"></i> Sil</button>
-                        <input class="form-control photo-order" type="number" placeholder="No" value="<?php echo $result['order_no'];?>" min=0>
+                        <button type="button" class="btn btn-sm btn-danger delete-button" data-field="<?php echo $result["id"]; ?>"><i data-feather="x"></i> Sil</button>
+                        <input class="form-control photo-order" type="number" placeholder="No" data-field="<?php echo $result["id"]; ?>" value="<?php echo $result['order_no'];?>" min=0>
                     </div>
                 </div>
             </div>
@@ -30,11 +30,57 @@ $results = $conn->query($SQL);
 
 <script>
     feather.replace()
+    
+    $(".photo-order").on('change',function(){
+       $data = {'updateOrder':'yes', 'orderNo':$(this).val(), 'id':$(this).attr("data-field")}
+       $.ajax({
+           type: "POST",
+           url: "galleryActions.php",
+           data: $data,
+           dataType: "json",
+           success: function (response) {
+               if(response.success){
+                    $("#main").load("tabs/galleryView.php")
+               }
+               else{
+                   alert(response.error)
+               }
+               
+           }
+       });
+
+    });
+
+    $(".delete-button").on('click',function(){
+       $data = {'deletePhoto':'yes', 'id':$(this).attr("data-field")}
+       $.ajax({
+           type: "POST",
+           url: "galleryActions.php",
+           data: $data,
+           dataType: "json",
+           success: function (response) {
+               if(response.success){
+                    $("#main").load("tabs/galleryView.php")
+               }
+               else{
+                   alert(response.error)
+               }
+               
+            }   
+        });
+    });
+
+   
 </script>
 <style>
     .photo-order {
         margin-left: 10em !important;
         width: 30px !important;
         height: 30px !important;
+    }
+
+    #refresh-button:hover {
+        color: #cacaca;
+        background-color: #885888;
     }
 </style>

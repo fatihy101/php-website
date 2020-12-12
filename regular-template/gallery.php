@@ -1,3 +1,9 @@
+<?php 
+require_once("config.php");
+$SQL = "SELECT * FROM Gallery ORDER BY order_no";
+$results = $conn->query($SQL);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,82 +19,17 @@
 
     <!-- post author -->
 
-    <!-- post author -->
-
-    <!-- post author block -->
-
-
-
     <br>
     <div class="container">
         <div class="row">
+            <?php while($result = mysqli_fetch_array($results)){  ?>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="gallery">
-                    <a href="images/wedkapak-2.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-2-small.jpg"
-                            alt=""></a>
+                    <a href="<?php echo $result["photo"]; ?>" data-lightbox="wedkapak"> <img src="<?php echo $result["photo"]; ?>"></a>
+                </div>
+            </div>
+       <?php }  ?>
 
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="gallery">
-                    <a href="images/wedkapak-3.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-3-small.jpg"
-                            alt=""></a>
-
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="gallery">
-                    <a href="images/wedkapak-4.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-4-small.jpg"
-                            alt=""></a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="gallery">
-                    <a href="images/wedkapak-5.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-5-small.jpg"
-                            alt=""></a>
-
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="gallery">
-                    <a href="images/wedkapak-6.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-6-small.jpg"
-                            alt=""></a>
-
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="gallery">
-                    <a href="images/wedkapak-7.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-7-small.jpg"
-                            alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="gallery">
-                    <a href="images/wedkapak.jpg" data-lightbox="wedkapak"> <img src="images/wedkapak-small.jpg"
-                            alt=""></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="gallery">
-                    <a href="images/wedtop.jpg" data-lightbox="wedkapak"> <img src="images/wedtop-small.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="gallery">
-                    <a href="images/galeri-9.jpg" data-lightbox="wedkapak"> <img src="images/galeri-9.jpg" alt=""></a>
-                </div>
-            </div>
         </div>
     </div>
 
