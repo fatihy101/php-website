@@ -25,7 +25,7 @@ if(isset($_POST['publish'])){
     $SQL = sprintf($unformatted ,$_POST["post-title"], $image, $_POST["paragraph"]);
     
     if ($conn->query($SQL) === TRUE) {
-        echo "done ".$_POST["post-title"].$_POST["testVal"];
+        echo "done";
       
       } else {
         echo "Error: " . $SQL . "<br>" . $conn->error;

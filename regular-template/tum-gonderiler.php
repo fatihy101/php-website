@@ -38,7 +38,7 @@ $articles = $conn->query($SQL);
                         <div class='post-vertical-block'>
                         <!-- post vertical block -->
                         <div class='featured-img'>
-                            <a href='gonderi.php?article_no=".$article["article_no"]."' class='imagehover'><img src='".$article["photo"]."' alt=''></a>
+                            <a href='gonderi.php?article_no=".$article["article_no"]."' class='imagehover'><img class='postPhoto' src='".$article["photo"]."' alt=''></a>
                         </div>
                         <div class='post-vertical-content'>
                             <h2><a href='gonderi.php?article_no=".$article["article_no"]."' class='post-title'>".$article["title"]."</a></h2>
@@ -57,6 +57,12 @@ $articles = $conn->query($SQL);
     </div>
     <?php require 'footer-default.html';?>
 
+<style>
+    .postPhoto{
+        width: 250px;
+        height: 320px;
+    }
+</style>
 
 </body>
 
