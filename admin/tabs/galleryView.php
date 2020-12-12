@@ -6,7 +6,7 @@ $results = $conn->query($SQL);
 
 <div class=" row d-flex ju,stify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h2 class="h3 col">Galeri </h2> <p class="mr-5 text-muted "><b>Not:</b> Sıra numarası <b>düşük</b> olan, en üstte görünür. </p>
-        <button id="refresh-button" class="btn theme-color" ><i data-feather="repeat"></i> Yenile</button>
+      
 </div>
 <br>
 <div class="container">
