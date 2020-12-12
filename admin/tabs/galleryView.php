@@ -32,6 +32,9 @@ $results = $conn->query($SQL);
     feather.replace()
     
     $(".photo-order").on('change',function(){
+        if($(this).val()==''){
+            alert("Bir sıra numarası giriniz.")
+        }else{
        $data = {'updateOrder':'yes', 'orderNo':$(this).val(), 'id':$(this).attr("data-field")}
        $.ajax({
            type: "POST",
@@ -43,11 +46,12 @@ $results = $conn->query($SQL);
                     $("#main").load("tabs/galleryView.php")
                }
                else{
-                   alert(response.error)
+                   alert("İstek gönderilirken sunucuda bir hata oluştu:<br>" + response.error)
                }
                
            }
        });
+    }
 
     });
 

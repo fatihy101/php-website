@@ -39,7 +39,35 @@
                 Gelen Mesajlar 
               </a>
             </li>
+           
             <li class="nav-item">
+              <a id="edit-static" role="button" class="nav-link side-button">
+                <i data-feather="aperture"></i>
+                Sabit Fotoğrafları Düzenle
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a id="edit-about-us" role="button" class="nav-link side-button">
+                <i data-feather="info"></i>
+                Hakkımızdayı değiştir
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a id="edit-social-media-links" role="button" class="nav-link side-button">
+                <i data-feather="info"></i>
+                Sosyal Medya Linkleri
+              </a>
+            </li>
+
+          </ul>
+
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Gönderiler</span>
+          </h6>
+          <ul class="nav flex-column">
+           <li class="nav-item">
               <a id="new-post" role="button" class="nav-link side-button ">
                 <i data-feather="file-plus"></i>
                 Yeni Gönderi Yayınla
@@ -51,16 +79,7 @@
                 Yayınlanmış Gönderiler
               </a>
             </li>
-
-            <li class="nav-item">
-              <a id="edit-static" role="button" class="nav-link side-button">
-                <i data-feather="aperture"></i>
-                Sabit Fotoğrafları Düzenle
-              </a>
-            </li>
-
           </ul>
-
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span>Galeri</span>
           </h6>
@@ -81,7 +100,7 @@
           </ul>
       
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Salon</span>
+            <span>Salonlar</span>
           </h6>
           <ul class="nav flex-column mb-2">
             <li class="nav-item">

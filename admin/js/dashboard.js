@@ -75,5 +75,20 @@ $(function () {
     el.slideUp(800)
   })
 
+  $("#edit-about-us").on('click', function () {
+    var el = $(this)
+    $("#main").empty()
+    $("#main").load("tabs/editAboutUs.php")
+    $(".side-button").slideDown(1600)
+    el.slideUp(800)
+  })
+
+  $("#edit-social-media-links").on('click', function () {
+    var el = $(this)
+    $("#main").empty()
+    $("#main").load("tabs/socialMediaLinks.php")
+    $(".side-button").slideDown(1600)
+    el.slideUp(800)
+  })
 
 })
