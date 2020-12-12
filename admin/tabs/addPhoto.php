@@ -6,10 +6,8 @@
 
 <form id="image-form" method="POST" action="uploadPhotoDB.php" target="dummyframe" enctype="multipart/form-data">
     <div class="container">
-        <div id="output" class="alert alert-warning" role="alert" style="display: none;">
-
-        </div>
-  
+        <div id="output" class="alert alert-warning" role="alert" style="display: none;"> </div>
+        
         <div class="col-md-6">
             <div class="form-group">
                 <div class="input-group">

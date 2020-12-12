@@ -835,7 +835,7 @@ h2.form-text{
 .gallery{
     margin:10px 20px;
 }
-
+    
 .gallery img {
     transition: 1s;
     padding: 5px;
@@ -846,4 +846,8 @@ h2.form-text{
 .gallery img:hover {
     filter: grayscale(100%);
     transform: scale(1.1);
+}
+
+p{
+    word-wrap: break-word;
 }

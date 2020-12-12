@@ -109,7 +109,7 @@ $articles = $conn->query($SQL);
                
                     <?php while($article = mysqli_fetch_array($articles))
                     {
-                        $first_words = implode(' ', array_slice(explode(' ', $article["paragraph"]), 0, 8));
+                        $first_words = implode(' ', array_slice(explode(' ', ltrim(strip_tags($article["paragraph"]))), 0, 7));
 
                         echo " <div class='col-lg-4 col-sm-4 col-md-6 col-xs-12'>
                         <div class='post-vertical-block'>
