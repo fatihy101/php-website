@@ -792,6 +792,23 @@ display: none;
     box-sizing: border-box;
   }
 
+  @media screen and (max-width: 1000px) {
+    .myForm {
+       display: none !important;
+    }
+    .insta {
+        display: none !important;
+    }
+    .carousel-inner {
+        height: 280px !important;
+        width: auto !important;
+    }
+    .carousel-img {
+        height: 280px !important;
+        width: auto !important;
+    }
+}
+
 
 .main-theme{
     background-color: #9c27b0;

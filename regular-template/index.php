@@ -40,12 +40,12 @@ $articles = $conn->query($SQL);
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="https://www.modernwedding.com.au/wp-content/uploads/2020/07/28/Anna-Wang.jpg"
-                                style="height:600px; width:1400px;pointer-events:none;">
+                            <img class="carousel-img" src="https://www.modernwedding.com.au/wp-content/uploads/2020/07/28/Anna-Wang.jpg"
+                                style="height:600px; width:100%;pointer-events:none;">
                         </div>
                         <div class="item">
-                            <img src="https://s3.amazonaws.com/busites_www/mvkeywestresort/subpage_banners_weddings_1506952002.jpg"
-                                style="height:600px; width:1400px;pointer-events:none;">
+                            <img class="carousel-img" src="https://s3.amazonaws.com/busites_www/mvkeywestresort/subpage_banners_weddings_1506952002.jpg"
+                                style="height:600px; width:100%;pointer-events:none;">
                         </div>
                         <br>
                     </div>
@@ -60,7 +60,7 @@ $articles = $conn->query($SQL);
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <div class="myForm main-theme">
+                <div class="col-md-6 col-sm-3 myForm main-theme">
                     <h2 class="form-text"> TEKLİF AL </h2>
                     <form id="mainPageForm" method="post" action="insert-form.php">
                         <div class="row">
