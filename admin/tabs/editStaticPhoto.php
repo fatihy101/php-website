@@ -19,7 +19,7 @@ $results = $conn->query($SQL);
 
         <div class='col-lg-4 col-sm-4 col-md-6 col-xs-12 mt-3'>
             <div class="card mx-1">
-                <img id="img-upload" src="<?php echo $photo;?>" class="card-img-top">
+                <img src="<?php echo $photo;?>" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $result["photo_name"];?></h5>
                     <form action="editStaticPhotoDB.php" method="POST" target="dummyframe"
@@ -30,8 +30,6 @@ $results = $conn->query($SQL);
                         <span class="btn theme-color btn-file text-white">
                             <i data-feather="refresh-cw"></i>
                             Değiştir <input class="image-button" type="file" name="image" accept="image/*">
-
-
                         </span>
 
                     </form>
@@ -55,18 +53,10 @@ $results = $conn->query($SQL);
         })
 
     })
-    // $("form").on('submit', function () {
-    //     $(this).slideUp()
-    // });
 </script>
 
 
 <style>
-    #post-title {
-        border: 1px solid #cdcdcd;
-        margin-bottom: 1em;
-        font-weight: bold;
-    }
 
     .btn-file {
         position: relative;
@@ -89,8 +79,5 @@ $results = $conn->query($SQL);
         display: block;
     }
 
-    #img-upload {
-        width: 100%;
-    }
 </style>
 

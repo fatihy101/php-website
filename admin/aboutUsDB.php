@@ -1,8 +1,7 @@
-<?php
+<?php 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if(file_exists($_FILES['image']['tmp_name']) || is_uploaded_file($_FILES['image']['tmp_name'])){
     require_once("config.php");
-    $id = $_REQUEST["id_change"];
     $name = $_FILES['image']['name'];
     $target_dir = "images/";
     $target_file = $target_dir . basename($_FILES['image']["name"]);
@@ -20,14 +19,30 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']) );
       $image = 'data:image/'.$imageFileType.';base64,'.$image_base64;
       // Insert record
-      $SQL = "UPDATE StaticPhotos SET photo = '$image' WHERE id =$id";
+      $SQL = "UPDATE AboutUs SET photo = '$image' WHERE id = 1";
       
       if ($conn->query($SQL) === TRUE) {
           echo "done";
         } else {
           echo "Error: " . $SQL . "<br>" . $conn->error;
         }
+    
     }
+    $conn->close();
+}
+
+if(isset($_POST["update"])){
+    require_once("config.php");
+    $text = $_POST["body"];
+    $SQL = "UPDATE AboutUs SET paragraph = '$text' WHERE id = 1";
+
+    if ($conn->query($SQL) === TRUE) {
+        echo "done";
+      } else {
+        echo "Error: " . $SQL . "<br>" . $conn->error;
+      }
+
+      $conn->close();
 }
 
 
