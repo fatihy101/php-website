@@ -70,43 +70,32 @@ box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class="b-header
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="widget-bg widget-newsletter">
-                                    <div class="">
-                                        <div class="newsletter-bg">
-                                            <h1>Google Ads için ayrılmıştır.</h1>
-                                            <p><br> </br></p>
-                                            <p><br> </br></p>
-                                            <p><br> </br></p>
-                                            <p><br> </br></p>
-                                            <form method="post" action="newsletter.php">
-                                                <!-- Text input-->
-
-                                                <!-- Button -->
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- widget category start -->
-                            </div>
-
-                            <!-- widget category start -->
-
-                            <!-- widget category start -->
-
-                            <!-- widget category start -->
-
-                            <!-- widget category start -->
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
+                <!-- Text input-->
+
+                <!-- Button -->
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- widget category start -->
+    </div>
+
+    <!-- widget category start -->
+
+    <!-- widget category start -->
+
+    <!-- widget category start -->
+
+    <!-- widget category start -->
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
     <?php require 'footer-default.html';?>
 
