@@ -56,7 +56,7 @@
 
             <li class="nav-item">
               <a id="edit-social-media-links" role="button" class="nav-link side-button">
-                <i data-feather="info"></i>
+                <i data-feather="edit-3"></i>
                 Sosyal Medya Linkleri
               </a>
             </li>
@@ -69,13 +69,13 @@
           <ul class="nav flex-column">
            <li class="nav-item">
               <a id="new-post" role="button" class="nav-link side-button ">
-                <i data-feather="file-plus"></i>
+                <i data-feather="edit"></i>
                 Yeni Gönderi Yayınla
               </a>
             </li>
             <li class="nav-item">
               <a id="old-posts" role="button" class="nav-link side-button">
-                <i data-feather="archive"></i>
+                <i data-feather="file-text"></i>
                 Yayınlanmış Gönderiler
               </a>
             </li>
