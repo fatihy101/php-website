@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  if ($_SESSION["username"]==""){
+    $message = "<h1> BOŞ </h1>";
+    header("Location:login.php");
+  }
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +27,7 @@
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">WEDPRESS Admin Paneli</a>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <button id="sign-out-button" class=" btn nav-link px-1" href="#">
-          <i data-feather="log-out"></i> </button>
+        <a class="btn theme-color-dark" href="logout.php"> <i data-feather="log-out"></i> Çıkış Yap</a>
       </li>
     </ul>
   </nav>
