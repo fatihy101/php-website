@@ -8,15 +8,14 @@
 </head>
 
 <body>
-    <?php require 'header-default.html';?>
+    <?php require 'header-default.php';?>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="#">Planning</a></li>
-                        <li class="active">20+ wedding venue for your wedding date in 2017</li>
+                        <li><a href="index.php">Ana Sayfa</a></li>
+                        <li class="active">Salon </li> <!--TODO: PHP it.-->
                     </ol>
                 </div>
             </div>
@@ -41,11 +40,7 @@
                                             <a href="#" class="imagehover"><img src="images/galeri-3.jpg" alt=""></a>
                                         </div>
                                     </div>
-                                    <h2 style="text-align: center; background: rgb(162,0,255);
-background: linear-gradient(90deg, rgba(162,0,255,1) 0%, rgba(117,11,186,1) 41%, rgba(156,39,176,1) 100%);
-, rgba(212,10,132,1) 79%, rgba(201,0,255,1) 100%); -webkit-box-shadow: -5px 8px 5px 0px rgba(50, 50, 50, 0.75);
--moz-box-shadow:    -5px 8px 5px 0px rgba(50, 50, 50, 0.75);
-box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class="b-header">Salon 1</b></h2>
+                                    <h2 style="text-align: center; background: rgb(162,0,255);"><b class="b-header">Salon 1</b></h2>
                                     <hr />
                                     - 550 Kişi Oturma Kapasiteli<br />
                                     - Ses ve Işık Sistemi<br />
@@ -73,31 +68,9 @@ box-shadow:         -5px 8px 5px 0px rgba(50, 50, 50, 0.75);"><b class="b-header
             </div>
         </div>
     </div>
-                <!-- Text input-->
+    
 
-                <!-- Button -->
-
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- widget category start -->
-    </div>
-
-    <!-- widget category start -->
-
-    <!-- widget category start -->
-
-    <!-- widget category start -->
-
-    <!-- widget category start -->
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <?php require 'footer-default.html';?>
+    <?php require 'footer-default.php';?>
 
     </script>
 </body>

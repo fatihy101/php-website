@@ -51,7 +51,7 @@
                         
                         <li><a href='galeri.php'>Galeri</a></li>
 
-                        <li><a href='venues.php'>Salonlarımız</a>
+                        <li><a href='#'>Salonlarımız</a>
                             <ul>
                                 <li><a href='venues.php'>Salon 1</a>
                                 <li><a href='venues.php'>Salon 2</a></li>

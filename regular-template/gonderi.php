@@ -17,7 +17,7 @@ $article = mysqli_fetch_array($conn->query($SQL));
 </head>
 
 <body>
-    <?php require 'header-default.html';?>
+    <?php require 'header-default.php';?>
 
     <div class="container">
         <div class="row">
@@ -48,7 +48,7 @@ $article = mysqli_fetch_array($conn->query($SQL));
         </div>
     </div>
     <hr>
-    <?php require 'footer-default.html';?>
+    <?php require 'footer-default.php';?>
 </body>
 
 </html>

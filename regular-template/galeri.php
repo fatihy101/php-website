@@ -13,7 +13,7 @@ $results = $conn->query($SQL);
 </head>
 
 <body>
-    <?php require 'header-default.html';?>
+    <?php require 'header-default.php';?>
 
     <!-- post author block -->
 
@@ -54,7 +54,7 @@ $results = $conn->query($SQL);
         </div>
     </div>
 
-    <?php require 'footer-default.html';?>
+    <?php require 'footer-default.php';?>
     <script src="js/lightbox-plus-jquery.min.js"></script>
 
   

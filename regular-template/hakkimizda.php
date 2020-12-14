@@ -13,7 +13,7 @@ $result = mysqli_fetch_array($conn->query($SQL));
 </head>
 
 <body>
-<?php require 'header-default.html';?>
+<?php require 'header-default.php';?>
 
     <div class="container">
         <div class="row">
@@ -59,7 +59,7 @@ $result = mysqli_fetch_array($conn->query($SQL));
             </div>
         </div>
     </div>
-    <?php require 'footer-default.html';?>
+    <?php require 'footer-default.php';?>
 </body>
 
 </html>

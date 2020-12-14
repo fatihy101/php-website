@@ -25,7 +25,7 @@ $articles = $conn->query($SQL);
 <body style="background-color:#fff1ff;">
     <!--Topbar, navbar required-->
     <?php 
-    require 'header-default.html';
+    require 'header-default.php';
     ?>
     <div class="container">
         <div class="row">
@@ -132,7 +132,7 @@ $articles = $conn->query($SQL);
             </div>
         </div>
     </div>
-    <?php require 'footer-default.html';?>
+    <?php require 'footer-default.php';?>
     <!-- slider script -->
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/slider-carousel.js"></script>
