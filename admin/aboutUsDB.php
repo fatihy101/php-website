@@ -28,6 +28,9 @@ if(file_exists($_FILES['image']['tmp_name']) || is_uploaded_file($_FILES['image'
         }
     
     }
+
+    unset($_FILES['image']['tmp_name']);
+
     $conn->close();
 }
 
