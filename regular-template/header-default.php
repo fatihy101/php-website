@@ -1,3 +1,17 @@
+<?php 
+require_once("config.php");
+$SQL = "SELECT * FROM SocialMedia";
+$social_medias = $conn->query($SQL);
+
+$SQL = "SELECT photo FROM StaticPhotos WHERE attr_name='logo'";
+$logo = mysqli_fetch_array($conn->query($SQL))["photo"];
+
+$SQL = "SELECT id, venue_name FROM Venue ORDER BY order_no DESC ";
+$venues = $conn->query($SQL);
+
+
+?>
+
 <div class="container">
     <div class="topbar main-theme">
         <!-- topbar start -->
@@ -9,12 +23,35 @@
                 <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
                     <div class="header-social">
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                            <?php //Social Media accounts.
+                            while($social_media = mysqli_fetch_array($social_medias)){
+                                if($social_media["visibility"]==1) $attr = ""; else $attr ="style='display:none;'";
+                                switch ($social_media["platform"]) {
+                                    case 'facebook':
+                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-facebook'></i></a></li>";
+                                        break;
+
+                                    case 'instagram':
+                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-instagram'></i></a></li>";
+                                        break;
+
+                                    case 'pinterest':
+                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-pinterest'></i></a></li>";
+                                        break;
+                                        
+                                    case 'twitter':
+                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-twitter'></i></a></li>";
+                                        break;
+                                        
+                                    case 'google_plus':
+                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-google-plus'></i></a></li>";
+                                        break;
+                                        
+                                }
+
+                            } ?>
+                           
+                         
                         </ul>
                     </div>
                 </div>
@@ -30,8 +67,8 @@
                 <div class="col-md-4">
                     <div class="header-logo">
                         <!-- header logo -->
-                        <a href="index.php" title="WedPress - HTML Wedding Website Templates"><img src="images/logo.png"
-                                alt="WedPress - HTML Wedding Website Templates"></a>
+                        <a href="index.php"><img src="<?php echo $logo; ?>"
+                                alt="logo"></a>
                     </div>
                     <!-- /.header logo -->
                 </div>
@@ -51,12 +88,15 @@
                         
                         <li><a href='galeri.php'>Galeri</a></li>
 
-                        <li><a href='#'>Salonlarımız</a>
-                            <ul>
-                                <li><a href='venues.php'>Salon 1</a>
-                                <li><a href='venues.php'>Salon 2</a></li>
-                                <li><a href='venues.php'>Salon 3</a></li>
-                                <li><a href='venues.php'>Salon 4</a></li>
+                      
+                                <?php 
+                                $counter=0; 
+                                while($venue = mysqli_fetch_array($venues)){
+                                    if($counter==0) echo "<li><a href='salon.php?id=".$venue["id"]."'>Salonlarımız</a> <ul>";
+                                    echo "<li><a href='salon.php?id=".$venue["id"]."'>".$venue["venue_name"]."</a></li>";
+
+                                    $counter++;
+                                } ?>
                             </ul>
                         </li>
                         <li><a href='hakkimizda.php'>Hakkımızda</a></li>

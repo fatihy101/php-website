@@ -53,7 +53,7 @@
             height:200,
             lang:'tr-TR',
             toolbar: [
-            ['style', ['bold', 'italic', 'underline']],
+            ['style', ['bold', 'italic', 'underline', 'clear']],
             ['fontsize', ['fontsize']],
             ['color', ['color']],
             ['para', ['ul', 'ol']],

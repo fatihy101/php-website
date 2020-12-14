@@ -25,7 +25,7 @@ $article = mysqli_fetch_array($conn->query($SQL));
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb">
                         <li><a href="index.php">Ana Sayfa</a></li>
-                        <li class="active">Makale</li>
+                        <li class="active"><?php echo $article["title"]; ?> </li>
                     </ol>
                 </div>
             </div>

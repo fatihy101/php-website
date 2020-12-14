@@ -49,7 +49,7 @@ $result = mysqli_fetch_array($conn->query($SQL));
                         height: 300,
                         lang: 'tr-TR',
                         toolbar: [
-                                ['style', ['bold', 'italic', 'underline']],
+                                ['style', ['bold', 'italic', 'underline', 'clear']],
                                 ['fontsize', ['fontsize']],
                                 ['color', ['color']],
                                 ['para', ['ul', 'ol']],
