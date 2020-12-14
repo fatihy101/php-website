@@ -14,7 +14,7 @@ $insta_posts = $conn->query($sql);
 
 <div class="container">
 <table class="table table-borderless">
-    <div class="py-1 pt-2 mt-5" style="background-color: #ededed; text-align: center; font-weight: bold;">Sosyal Medya Linkleri</div>
+    <div class="py-1 pt-2 mt-5" style="background-color: #ededed; text-align: center; font-weight: bold;">Sosyal Medya Linkleri  <br><small class="text-muted">Not: Linklerin başına <b> http://</b> veya <b>https://</b> yazmayı unutmayın.</small></div>
     <thead style="background-color: #ededed;">
         <tr>
             <th scope="col">Platform</th>

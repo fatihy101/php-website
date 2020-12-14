@@ -2,6 +2,9 @@
 require_once("config.php");
 $SQL = "SELECT * FROM Article ORDER BY article_no DESC LIMIT 3;";
 $articles = $conn->query($SQL);
+
+$SQL = "SELECT * FROM StaticPhotos";
+$static_photos = $conn->query($SQL);
 ?>
 
 <!DOCTYPE html>
@@ -31,24 +34,32 @@ $articles = $conn->query($SQL);
         <div class="row">
             <div class="col-md-16">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <div class='carousel-inner' role='listbox'>
+                   <?php $counter = 0; 
+                   while($static_photo = mysqli_fetch_array($static_photos)){
+                       $photo_name = $static_photo["attr_name"];
+                       if($counter==0) $attr = "class='item active'"; else $attr = "class='item'";
+                       if(substr($photo_name, 0, 5)==="slayt" && $static_photo["photo"]!= ""){
+                           $counter++;
+                    
+                        echo "<div ".$attr.">
+                                <img class='carousel-img' src='".$static_photo["photo"]."'
+                                    style='height:600px; width:100%;pointer-events:none;'>
+                            </div>";
+                         } 
+                    } ?>
+                    <br>
+                </div>
+                     <!-- Indicators -->
+                     <ol class="carousel-indicators">
+                         <?php 
+                         for($i=0; $i < $counter; $i++) 
+                         {  
+                            if($i==0) $attr = "class='active'"; else $attr = " ";
+                            echo " <li data-target='#carousel-example-generic' data-slide-to='".$i."' ".$attr."></li>";
+                        }
+                        ?>
                     </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img class="carousel-img" src="https://www.modernwedding.com.au/wp-content/uploads/2020/07/28/Anna-Wang.jpg"
-                                style="height:600px; width:100%;pointer-events:none;">
-                        </div>
-                        <div class="item">
-                            <img class="carousel-img" src="https://s3.amazonaws.com/busites_www/mvkeywestresort/subpage_banners_weddings_1506952002.jpg"
-                                style="height:600px; width:100%;pointer-events:none;">
-                        </div>
-                        <br>
-                    </div>
 
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
