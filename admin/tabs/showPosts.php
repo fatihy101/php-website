@@ -1,6 +1,6 @@
 <?php 
 require_once("../config.php");
-$SQL = "SELECT * FROM Article";
+$SQL = "SELECT * FROM Article ORDER BY article_no DESC";
 $results = $conn->query($SQL);
 ?>
 <div
