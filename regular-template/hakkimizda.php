@@ -2,10 +2,9 @@
 require_once("config.php");
 $SQL = "SELECT * FROM AboutUs";
 $result = mysqli_fetch_array($conn->query($SQL));
-// Burada bir gariplik var. Her şey doğru görünmesine rağmen veri alamıyoruz.
-$SQL = "SELECT * FROM SocialMedia";
-$social_medias = $conn->query($SQL);
-// echo json_encode($social_medias);
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -43,33 +42,36 @@ $social_medias = $conn->query($SQL);
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                     <div class="blog-social-share">
                                         <ul>
-                                        <?php //Social Media accounts.
+                                        <?php //Social Media accounts.  
+                                        $SQL = "SELECT * FROM SocialMedia";
+                                        $social_medias = $conn->query($SQL);
+                                        
                                             while($social_media = mysqli_fetch_array($social_medias)){
                                                 if($social_media["visibility"]==1) $attr = ""; else $attr ="style='display:none;'";
-                                                    echo(" dasdasdasdasd");
+                                                  
 
-                                                switch ($social_media["platform"]) {
-                                                    case 'facebook':
-                                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-facebook'></i></a></li>";
-                                                        break;
+                                                    switch ($social_media["platform"]) {
+                                                        case 'facebook':
+                                                            echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-facebook'></i></a></li>";
+                                                            break;
 
-                                                    case 'instagram':
-                                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-instagram'></i></a></li>";
-                                                        break;
+                                                        case 'instagram':
+                                                            echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-instagram'></i></a></li>";
+                                                            break;
 
-                                                    case 'pinterest':
-                                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-pinterest'></i></a></li>";
-                                                        break;
-                                                        
-                                                    case 'twitter':
-                                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-twitter'></i></a></li>";
-                                                        break;
-                                                        
-                                                    case 'google_plus':
-                                                        echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-google-plus'></i></a></li>";
-                                                        break;
-                                                        
-                                                }
+                                                        case 'pinterest':
+                                                            echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-pinterest'></i></a></li>";
+                                                            break;
+                                                            
+                                                        case 'twitter':
+                                                            echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-twitter'></i></a></li>";
+                                                            break;
+                                                            
+                                                        case 'google_plus':
+                                                            echo "<li ".$attr."><a href='".$social_media["url"]."'><i class='fa fa-google-plus'></i></a></li>";
+                                                            break;
+                                                            
+                                                    }
 
                                             } ?>
                                         </ul>

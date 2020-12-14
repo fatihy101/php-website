@@ -1,10 +1,13 @@
 <?php 
+require_once("config.php");
+
+$SQL = "SELECT photo FROM StaticPhotos WHERE attr_name='logo'";
+$logo = mysqli_fetch_array($conn->query($SQL))["photo"];
 
   session_start();
   $message="";
   if(count($_POST)>0) {
-    require_once("config.php");
-    $SQL = "SELECT * FROM AdminInfo WHERE username='" . $_POST['username'] ."' and password = '". $_POST['password']."'";
+    $SQL = "SELECT * FROM AdminInfo WHERE username='" . $_POST['username'] ."' and password = '".md5($_POST['password'])."'";
     $result = $conn-> query($SQL);
     $row  = mysqli_fetch_array($result);
     if(is_array($row)) {
@@ -34,7 +37,7 @@
         <div class="col-3"></div>
         <div class="col-6">
           <form class="form-signin" method="post" action="">
-            <img src="images/logo.png" class="mt-5">
+            <img src="<?php echo $logo; ?>" class="mt-5">
             <h1 class="h3 mb-3 font-weight-normal align-center"></h1>
             
             <div class="message"><?php if($message!="") { echo "<div class='alert alert-danger mt-3'>".$message."</div>"; } ?></div>

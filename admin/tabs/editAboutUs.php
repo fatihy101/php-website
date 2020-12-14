@@ -16,7 +16,7 @@ $result = mysqli_fetch_array($conn->query($SQL));
                         <div class="row">
                                 <img src="<?php echo $result["photo"]; ?>" width="1140" height="440"></img>
                                 <div class="col-md-12 mt-3">
-                                        <small>Önerilen boyut: <b> 1140x440 </small>
+                                        <small>Önerilen çözünürlük: <b> 1140x440</b>,  Maksimum boyut: <b>2MB </b></small>
                                         <span class="btn theme-color btn-file text-white float-right">
                                                 <i data-feather="refresh-cw"></i>
                                                 Değiştir <input id="image-input" type="file" name="image" accept="image/*">

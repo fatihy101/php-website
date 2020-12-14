@@ -71,7 +71,7 @@ $static_photos = $conn->query($SQL);
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <div class="col-md-6 col-sm-3 myForm main-theme">
+                <div class="col-md-6 col-sm-3 myForm main-theme" style="margin-top: 30px;">
                     <h2 class="form-text"> TEKLİF AL </h2>
                     <form id="mainPageForm" method="post" action="insert-form.php">
                         <div class="row">

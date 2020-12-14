@@ -67,8 +67,7 @@ $venues = $conn->query($SQL);
                 <div class="col-md-4">
                     <div class="header-logo">
                         <!-- header logo -->
-                        <a href="index.php"><img src="<?php echo $logo; ?>"
-                                alt="logo"></a>
+                        <a href="index.php"><img src="<?php echo $logo; ?>" style="max-height: 140px;" alt="logo"></a>
                     </div>
                     <!-- /.header logo -->
                 </div>
