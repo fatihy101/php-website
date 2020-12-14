@@ -8,7 +8,7 @@
         <!--Upload area-->
         <div id="output" class="alert alert-warning" role="alert" style="display: none;"> </div>
 
-        <form id ="articleForm" method="POST" target="dummyframe" enctype="multipart/form-data">
+        <form id ="articleForm" method="POST" action="VenueDB.php" target="dummyframe" enctype="multipart/form-data">
             <div class="col-md-6">
                 <div class="form-group">
                 <div class="input-group">
@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-12">
                 <input name="post-title" class="form-control-plaintext" style="border: 1px solid #cdcdcd; margin-bottom: 1em;
-                font-weight: bold;" placeholder="Gönderi başlığı" type="text" required></input>
+                font-weight: bold;" placeholder="Salon İsmi" type="text" required></input>
 
                 <!--Summernote-->
                 <textarea id="summernote" name="paragraph"></textarea>
@@ -47,7 +47,7 @@
 
     $(document).ready( function() {
         $('#summernote').summernote({
-            placeholder: 'Gönderinizi buraya yazınız...',
+            placeholder: 'Salonun detaylarını yazınız...',
             disableDragAndDrop: true,
             tabsize:1,
             height:200,

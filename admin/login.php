@@ -39,11 +39,11 @@
             
             <div class="message"><?php if($message!="") { echo "<div class='alert alert-danger mt-3'>".$message."</div>"; } ?></div>
 
-            <label for="username" class="sr-only">E-postanız:</label>
-            <input name="username" type="text" class="form-control mt-5 wid" placeholder="E-postanız:" required autofocus>
+            <label for="username" class="sr-only">Kullanıcı adı</label>
+            <input name="username" type="text" class="form-control mt-5 wid" placeholder="Kullanıcı adı:" required autofocus>
             
-            <label for="pass-input" class="sr-only">Parolanız:</label>
-            <input id="pass-input" name="password" type="password"  class="form-control align-center mt-4" placeholder="Parolanız:" required>
+            <label for="pass-input" class="sr-only">Parola</label>
+            <input id="pass-input" name="password" type="password"  class="form-control align-center mt-4" placeholder="Parola" required>
             
             <div class="mb-3">
             
