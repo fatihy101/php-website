@@ -9,8 +9,9 @@ $venue_info = mysqli_fetch_array($conn->query($SQL));
 $next_order = intval($venue_info["order_no"] - 1);
 $SQL ="SELECT id FROM Venue WHERE order_no=$next_order";
 
-
-$next_venue_id = mysqli_fetch_array($conn->query($SQL))["id"] ?? "";
+$q_result =$conn->query($SQL);
+if(mysqli_num_rows($q_result)!=0) $next_venue_id = mysqli_fetch_array($q_result)["id"];
+else $next_venue_id="";
 
 ?>
 <!DOCTYPE html>

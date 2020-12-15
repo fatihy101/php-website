@@ -87,7 +87,7 @@ $venues = $conn->query($SQL);
 
                       
                                 <?php 
-                                if($venues==null)
+                                if(mysqli_num_rows($venues) != 0)
                                 {   
                                     $counter=0; 
                                     while($venue = mysqli_fetch_array($venues)){
