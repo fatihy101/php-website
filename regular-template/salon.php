@@ -55,7 +55,7 @@ else $next_venue_id="";
                                             <a class="imagehover"><img src="<?php echo $venue_info["photo"]; ?> "></a>
                                         </div>
                                     </div>
-                                    <h2 style="text-align: center; background: rgb(162,0,255);"><b class="b-header"><?php echo $venue_info["venue_name"]; ?> </b></h2>
+                                    <h2 style="text-align: center; background: #9c27b0;"><b class="b-header"><?php echo $venue_info["venue_name"]; ?> </b></h2>
                                     <hr />
                                     <div class=" col-lg-3 ml-5">
                                         <?php echo $venue_info["description"]; ?> 

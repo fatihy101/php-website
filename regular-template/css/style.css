@@ -411,7 +411,7 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 #navigation.small-screen ul ul li a { padding-left: 25px; }
 #navigation.small-screen ul ul ul li a { padding-left: 35px; }
 #navigation.small-screen ul ul li a { color: #2b2528; background: none; }
-#navigation.small-screen ul ul li:hover > a, #navigation.small-screen ul ul li.active > a { color: #d37fb0; }
+#navigation.small-screen ul ul li:hover > a, #navigation.small-screen ul ul li.active > a { color:#9c27b0; }
 #navigation.small-screen ul ul, #navigation.small-screen ul ul ul, #navigation.small-screen.align-right ul ul { position: relative; left: 0; width: 100%; margin: 0; top: 0px; text-align: left; }
 #navigation.small-screen > ul > li.has-sub > a:after, #navigation.small-screen > ul > li.has-sub > a:before, #navigation.small-screen ul ul > li.has-sub > a:after, #navigation.small-screen ul ul > li.has-sub > a:before { display: none; }
 #navigation.small-screen #menu-button { display: block; padding: 17px; color: #2b2528; cursor: pointer; font-size: 12px; text-transform: uppercase; font-weight: 700; }
@@ -444,7 +444,7 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 .page-breadcrumb .breadcrumb { background-color: #fff1fd; padding: 10px 10px; margin-bottom: 0px; font-size: 10px; font-weight: 700; border: none; text-transform: uppercase; border-radius: 0px; font-family: 'Karla', sans-serif; }
 .page-breadcrumb .breadcrumb>li a { color: #2b2528; }
 .page-breadcrumb .breadcrumb>li a:hover { color: #4c4845; }
-.page-breadcrumb .breadcrumb>.active { color: #d37fb0; }
+.page-breadcrumb .breadcrumb>.active { color: #9c27b0; }
 .page-breadcrumb .breadcrumb>li+li:before { padding: 0 5px; color: #4c4845; content: "\f105"; font: normal normal normal 12px/1 FontAwesome; }
 
 /*-------------------------------
