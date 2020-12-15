@@ -9,9 +9,7 @@ $logo = mysqli_fetch_array($conn->query($SQL))["photo"];
 $SQL = "SELECT id, venue_name FROM Venue ORDER BY order_no DESC ";
 $venues = $conn->query($SQL);
 
-
 ?>
-
 <div class="container">
     <div class="topbar main-theme">
         <!-- topbar start -->
@@ -89,13 +87,19 @@ $venues = $conn->query($SQL);
 
                       
                                 <?php 
-                                $counter=0; 
-                                while($venue = mysqli_fetch_array($venues)){
-                                    if($counter==0) echo "<li><a href='salon.php?id=".$venue["id"]."'>Salonlarımız</a> <ul>";
-                                    echo "<li><a href='salon.php?id=".$venue["id"]."'>".$venue["venue_name"]."</a></li>";
-
-                                    $counter++;
-                                } ?>
+                                if($venues==null)
+                                {   
+                                    $counter=0; 
+                                    while($venue = mysqli_fetch_array($venues)){
+                                        if($counter==0) echo "<li><a href='salon.php?id=".$venue["id"]."'>Salonlarımız</a> <ul>";
+                                        echo "<li><a href='salon.php?id=".$venue["id"]."'>".$venue["venue_name"]."</a></li>";
+                                        
+                                        $counter++;
+                                    }
+                                }
+                                else
+                                echo "<li><a href='#'>Salonlarımız</a> <ul>";
+                                 ?>
                             </ul>
                         </li>
                         <li><a href='hakkimizda.php'>Hakkımızda</a></li>

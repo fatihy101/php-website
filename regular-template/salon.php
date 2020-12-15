@@ -10,12 +10,8 @@ $next_order = intval($venue_info["order_no"] - 1);
 $SQL ="SELECT id FROM Venue WHERE order_no=$next_order";
 
 
-try {
-    $next_venue_id = mysqli_fetch_array($conn->query($SQL))["id"];
-} catch (Exception $e) {
-    $next_venue_id="";
+$next_venue_id = mysqli_fetch_array($conn->query($SQL))["id"] ?? "";
 
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
