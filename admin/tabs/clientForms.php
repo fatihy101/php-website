@@ -23,12 +23,7 @@ require_once("../config.php");
                 <i data-feather="calendar"></i>
                 Tümü
             </button>
-            <div class="dropdown-menu" aria-labelledby="date-dropdown">
-                <button class="dropdown-item" type="button">Bugün</button>
-                <button class="dropdown-item" type="button">Bu hafta</button>
-                <button class="dropdown-item" type="button">Bu ay</button>
-                <button class="dropdown-item" type="button">Tümü</button>
-            </div>
+           
         </div>
     </div>
     
