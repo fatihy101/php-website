@@ -353,13 +353,13 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 /*--------------------------
      5.2 Navigations Regular
     ----------------------------*/
-.header { background-color: #faf1f8; padding-top: 30px; position: relative; z-index: 99; padding-bottom: 30px; }
+.header { background-color: #fff1fd; padding-top: 30px; position: relative; z-index: 99; padding-bottom: 30px; }
 .header-logo { padding-bottom: 10px; padding-top: 12px; }
 .navigation { position: relative; z-index: 9; }
 #navigation, #navigation ul, #navigation ul li, #navigation ul li a, #navigation #menu-button { margin: 0; padding: 0; border: 0; list-style: none; line-height: 1; display: block; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 #navigation:after, #navigation > ul:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 #navigation #menu-button { display: none; }
-#navigation { font-family: Montserrat, sans-serif; background: rgb(250, 241, 248); border-top: 2px solid #9c27b0; border-bottom: 1px solid #d3cacf; }
+#navigation { font-family: Montserrat, sans-serif; background: #fff1fd; border-top: 2px solid #9c27b0; border-bottom: 1px solid #d3cacf; }
 #navigation > ul > li { float: left; }
 #navigation.align-center > ul { font-size: 0; text-align: center; }
 #navigation.align-center > ul > li { display: inline-block; float: none; }
@@ -441,7 +441,7 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 */
 .page-title { font-size: 24px; font-weight: 600; margin-bottom: 0px; padding-bottom: 20px; }
 .page-breadcrumb { }
-.page-breadcrumb .breadcrumb { background-color: #f6f3f5; padding: 10px 10px; margin-bottom: 0px; font-size: 10px; font-weight: 700; border: none; text-transform: uppercase; border-radius: 0px; font-family: 'Karla', sans-serif; }
+.page-breadcrumb .breadcrumb { background-color: #fff1fd; padding: 10px 10px; margin-bottom: 0px; font-size: 10px; font-weight: 700; border: none; text-transform: uppercase; border-radius: 0px; font-family: 'Karla', sans-serif; }
 .page-breadcrumb .breadcrumb>li a { color: #2b2528; }
 .page-breadcrumb .breadcrumb>li a:hover { color: #4c4845; }
 .page-breadcrumb .breadcrumb>.active { color: #d37fb0; }
