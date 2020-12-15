@@ -47,7 +47,7 @@ $results = $conn->query($SQL);
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="next-post">
                         <h3 class="next-link-title"><a href="#" class="title">Merak ettiğiniz bir konu için</a></h3>
-                        <p><a href="contactus-page.php" class="next-link btn-link">Bizimle iletişime geçin!</a></p>
+                        <p><a href="iletisim.php" class="next-link btn-link">Bizimle iletişime geçin!</a></p>
                     </div>
                 </div>
             </div>
