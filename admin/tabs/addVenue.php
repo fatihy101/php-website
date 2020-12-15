@@ -1,5 +1,5 @@
 <div class="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h2 class="col h3">Salon Ekle</h2>
+    <h2 class="col h3">Salon Ekle</h2> <p class="text-muted"><b>Not:</b> Salonu ekledikten sonra <b>Salonları Listele</b> sayfasına gidip sıralamayı unutmayın.</p>
 </div>
 
 <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe" hidden></iframe>
