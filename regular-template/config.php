@@ -1,8 +1,8 @@
 <?php 
-$servername = "db"; // If it's not Docker, $servername must be localhost for dev.
-$username = "root";
-$password = "example";
-$db = "wedpress";
+$servername = "localhost"; 
+$username = "u9407810_test";
+$password = "qa7hkgo3dlcu";
+$db = "u9407810_test_wedpress";
 
 $conn = new mysqli($servername, $username, $password, $db);
 
