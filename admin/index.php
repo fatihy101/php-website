@@ -62,6 +62,13 @@
             </li>
 
             <li class="nav-item">
+              <a id="update-navbar" role="button" class="nav-link side-button">
+                <i data-feather="edit-2"></i>
+                Navigasyon Çubuğunu Güncelle
+              </a>
+            </li>
+
+            <li class="nav-item">
               <a id="edit-social-media-links" role="button" class="nav-link side-button">
                 <i data-feather="edit-3"></i>
                 Sosyal Medya Linkleri

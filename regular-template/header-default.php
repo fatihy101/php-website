@@ -9,6 +9,52 @@ $logo = mysqli_fetch_array($conn->query($SQL))["photo"];
 $SQL = "SELECT id, venue_name FROM Venue ORDER BY order_no DESC ";
 $venues = $conn->query($SQL);
 
+$SQL = "SELECT id, text, visibility FROM HeaderElements;";
+$navbar_items = $conn->query($SQL);
+
+while($navbar_item = mysqli_fetch_array($navbar_items)){
+    switch (intval($navbar_item["id"])) {
+        case 1:
+            # For catchword
+            $catchword = $navbar_item; 
+            break;
+        
+        case 2:
+            # For home_page
+            $home_page_button = $navbar_item; 
+            break;
+
+        case 3:
+            # For gallery
+            $gallery_button = $navbar_item; 
+            
+            break;
+
+        case 4:
+            # For venues
+            $venues_button = $navbar_item; 
+            if($venues_button["visibility"]==1) $venues_button_attr = ""; else $venues_button_attr ="style='display:none;'"; 
+            break;
+
+        case 5:
+            # For about_us
+            $about_us_button = $navbar_item;
+            break;
+        
+        case 6:
+            # For contact_us
+            $contact_us_button = $navbar_item;
+            break;
+            
+        case 7:
+            # For all_articles
+            $all_articles = $navbar_item;
+            break;
+    
+
+    }
+}
+
 ?>
 <div class="container">
     <div class="topbar main-theme">
@@ -16,7 +62,8 @@ $venues = $conn->query($SQL);
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                    <p class="welcome-text">1 Numaralı Evlilik Adresi</p>
+                    <p class="welcome-text" <?php if($catchword["visibility"]!=1) echo "style='display:none;'";?> >
+                    <?php echo $catchword["text"];?></p>
                 </div>
                 <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
                     <div class="header-social">
@@ -81,9 +128,9 @@ $venues = $conn->query($SQL);
                 <!-- navigations -->
                 <div id='navigation'>
                     <ul>
-                        <li><a href='index.php'>Ana Sayfa</a></li>
+                        <li <?php if($home_page_button["visibility"]!=1)  echo "style='display:none;'";?> ><a href='index.php'><?php echo $home_page_button["text"]; ?></a></li>
                         
-                        <li><a href='galeri.php'>Galeri</a></li>
+                        <li <?php if($gallery_button["visibility"]!=1)  echo "style='display:none;'";?> ><a href='galeri.php'><?php echo $gallery_button["text"];?></a></li>
 
                       
                                 <?php 
@@ -91,19 +138,21 @@ $venues = $conn->query($SQL);
                                 {   
                                     $counter=0; 
                                     while($venue = mysqli_fetch_array($venues)){
-                                        if($counter==0) echo "<li><a href='salon.php?id=".$venue["id"]."'>Salonlarımız</a> <ul>";
-                                        echo "<li><a href='salon.php?id=".$venue["id"]."'>".$venue["venue_name"]."</a></li>";
+                                        if($counter==0) echo "<li ".$venues_button_attr." ><a href='salon.php?id=".$venue["id"]."'>".$venues_button["text"]."</a> <ul>";
+                                        echo "<li ".$venues_button_attr." ><a href='salon.php?id=".$venue["id"]."'>".$venue["venue_name"]."</a></li>";
                                         
                                         $counter++;
                                     }
                                 }
                                 else
-                                echo "<li><a href='#'>Salonlarımız</a> <ul>";
+                                echo "<li ".$venues_button_attr." ><a href='#'>".$venues_button["text"]."</a> <ul>";
                                  ?>
                             </ul>
                         </li>
-                        <li><a href='hakkimizda.php'>Hakkımızda</a></li>
-                        <li><a href='iletisim.php'>İLETİŞİM</a></li>
+                        
+                        <li <?php if($about_us_button["visibility"]!=1)  echo "style='display:none;'";?> ><a href='hakkimizda.php'><?php echo $about_us_button["text"]; ?> </a></li>
+                        <li <?php if($contact_us_button["visibility"]!=1)  echo "style='display:none;'";?> ><a href='iletisim.php'><?php echo $contact_us_button["text"]; ?></a></li>
+                        <li <?php if($all_articles["visibility"]!=1)  echo "style='display:none;'";?> ><a href='tum-gonderiler.php'><?php echo $all_articles["text"]; ?></a></li>
                     </ul>
                 </div>
             </div>

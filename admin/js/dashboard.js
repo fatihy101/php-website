@@ -91,4 +91,12 @@ $(function () {
     el.slideUp(800)
   })
 
+  $("#update-navbar").on('click', function () {
+    var el = $(this)
+    $("#main").empty()
+    $("#main").load("tabs/updateNavbar.php")
+    $(".side-button").slideDown(1600)
+    el.slideUp(800)
+  })
+
 })

@@ -113,7 +113,7 @@ $static_photos = $conn->query($SQL);
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                     <div class="section-header">
-                        <h2 class="heading-line">Son Paylaşımlar</h2>
+                        <h2 class="heading-line">Son Gönderiler</h2>
                         <a href="tum-gonderiler.php" class="btn btn-default btn-xs pull-right"> Tüm Gönderileri Gör</a>
                     </div>
                 </div>
