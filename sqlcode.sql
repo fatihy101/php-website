@@ -117,4 +117,47 @@ CREATE TABLE `Venue` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 
+DROP TABLE IF EXISTS `ContactUs`;
+CREATE TABLE `ContactUs` (
+  `attr_name` varchar(150) CHARACTER SET utf8 COLLATE utf8_turkish_ci NOT NULL,
+  `cms_name` varchar(150) CHARACTER SET utf8 COLLATE utf8_turkish_ci NOT NULL,
+  `text` varchar(500) CHARACTER SET utf8 COLLATE utf8_turkish_ci NOT NULL,
+  `visibility` tinyint NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+TRUNCATE `ContactUs`;
+INSERT INTO `ContactUs` (`attr_name`, `cms_name`, `text`, `visibility`) VALUES
+('page_title',	'Sayfa Başlığı',	'İletişim Adreslerimiz',	1),
+('page_text',	'Formun üstündeki Yazı',	'Merak ettiğiniz bir soru için bize mesaj bırakabilirsiniz.',	1),
+('contact_info_title',	'İletişim Bilgilerinin Başlığı',	'HAYALLERİNİZDEKİ DÜĞÜNÜ YAŞAMANIZ İÇİN BURADAYIZ',	1),
+('email_address_title',	'E-posta Alanı Başlığı',	'E-POSTA ADRESİMİZ',	1),
+('email_address',	'E-posta Adresi',	'test@mail.com',	1),
+('address_title',	'Adres Başlığı',	' ADRESİMİZ',	1),
+('address',	'Adres',	'Silahtarağa, Üniversite 1.Sokak No:13, 59860 Çorlu/Tekirdağ',	1),
+('phone_no_title',	'Telefon Numarası Başlığı',	'TELEFON NUMARAMIZ',	1),
+('phone_no',	'Telefon Numarası',	'+90 555 999 4567',	1),
+('location_title',	'Konum Başlığı',	'KONUMUMUZ',	1),
+('location_html',	'Konum Bağlantısı',	'<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6024.3657982346895!2d27.5138455!3d40.9774757!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b48a9c04703891%3A0x7271e8ad4a41e84b!2sTekirda%C4%9F%20Sahil!5e0!3m2!1str!2str!4v1608200330722!5m2!1str!2str\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>',	1);
+
+DROP TABLE IF EXISTS `HeaderElements`;
+CREATE TABLE `HeaderElements` (
+  `id` int NOT NULL,
+  `attr_name` varchar(150) CHARACTER SET utf8 COLLATE utf8_turkish_ci NOT NULL,
+  `cms_name` varchar(150) CHARACTER SET utf8 COLLATE utf8_turkish_ci NOT NULL,
+  `text` varchar(150) COLLATE utf8_turkish_ci NOT NULL,
+  `visibility` tinyint NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+TRUNCATE `HeaderElements`;
+INSERT INTO `HeaderElements` (`id`, `attr_name`, `cms_name`, `text`, `visibility`) VALUES
+(1,	'catchword',	'Slogan',	'1 NUMARALI EVLİLİK ADRESİ',	1),
+(2,	'navbar-item',	'Ana Sayfa',	'ANA SAYFA',	1),
+(3,	'navbar-item',	'Galeri',	'GALERİ',	1),
+(4,	'navbar-item',	'Salonlar',	'SALONLARIMIZ',	1),
+(5,	'navbar-item',	'Hakkımızda',	'HAKKIMIZDA',	1),
+(6,	'navbar-item',	'İletişim',	'İLETİŞİM',	1),
+(7,	'navbar-item',	'Tüm gönderiler',	'Tüm Gönderiler',	1);
+
+
+
 -- 2020-12-14 22:51:38

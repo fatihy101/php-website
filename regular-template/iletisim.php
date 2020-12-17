@@ -1,3 +1,48 @@
+<?php 
+require_once("config.php");
+
+$SQL = "SELECT * FROM ContactUs";
+$results = $conn->query($SQL);
+while($result=mysqli_fetch_array($results)){
+
+    switch($result["attr_name"]){
+    case "address":
+        $address = $result;
+        break;
+    case "address_title":
+        $address_title = $result;
+        break;
+    case "contact_info_title":
+        $contact_info_title = $result;
+        break;
+    case "email_address":
+        $email_address = $result;
+        break;
+    case "email_address_title":
+        $email_address_title = $result;
+        break;
+    case "location_title":
+        $location_title = $result;
+        break;
+    case "location_html":
+        $location_html = $result;
+        break;
+    case "page_text":
+        $page_text = $result;
+        break;
+    case "page_title":
+        $page_title = $result;
+        break;
+    case "phone_no":
+        $phone_no = $result;
+        break;
+    case "phone_no_title":
+        $phone_no_title = $result;
+        break;
+    }
+}
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +67,7 @@
             </div>
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="page-section">
-                    <h1 class="page-title">İletişim Adreslerimiz</h1>
+                    <h1 class="page-title" <?php if($page_title["visibility"]!=1) echo "style='display:none;'";?>><?php echo $page_title["text"]; ?></h1>
                 </div>
             </div>
         </div>
@@ -34,7 +79,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                             <div class="section-header">
-                                <p class="lead">Merak ettiğiniz bir soru için bize mesaj bırakabilirsiniz.</p>
+                                <p class="lead" <?php if($page_text["visibility"]!=1) echo "style='display:none;'";?>><?php echo $page_text["text"]; ?></p>
                                 <hr class="col-lg-8 col-sm-8 col-md-8 col-xs-8">
                             </div>
                         </div>
@@ -79,38 +124,38 @@
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                             <div class="conatct-info">
                                 <div class="section-header">
-                                    <h2 class="heading-line">HAYALLERİNİZDEKİ DÜĞÜNÜ YAŞAMANIZ İÇİN BURADAYIZ</h2>
+                                    <h2 class="heading-line" <?php if($contact_info_title["visibility"]!=1) echo "style='display:none;'";?>><?php echo $contact_info_title["text"];?></h2>
                                 </div>
-                                <div class="contact-details">
+                                <div class="contact-details" <?php if($email_address["visibility"]!=1) echo "style='display:none;'";?>>
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                             <div class="contact-icon"><i class="fa fa-envelope-o"></i></div>
                                         </div>
-                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                            <h4 class="contact-title">E-mail ADERSİMİZ</h4>
-                                            <p>ornek@mail.com</p>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" >
+                                            <h4 class="contact-title" <?php if($email_address_title["visibility"]!=1) echo "style='display:none;'";?> ><?php echo $email_address_title["text"]; ?></h4>
+                                            <p><?php echo $email_address["text"]; ?></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="contact-details">
+                                <div class="contact-details" <?php if($address["visibility"]!=1) echo "style='display:none;'";?>>
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                             <div class="contact-icon"><i class="fa fa-home"></i></div>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                            <h4 class="contact-title">ADRESİMİZ</h4>
-                                            <p>Silahtarağa, Üniversite 1.Sokak No:13, 59860 Çorlu/Tekirdağ</p>
+                                            <h4 class="contact-title" <?php if($address_title["visibility"]!=1) echo "style='display:none;'";?>><?php echo $address_title["text"]; ?></h4>
+                                            <p><?php echo $address["text"];?></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="contact-details">
+                                <div class="contact-details" <?php if($phone_no["visibility"]!=1) echo "style='display:none;'";?>>
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                             <div class="contact-icon"><i class="fa fa-share"></i></div>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                            <h4 class="contact-title">TELEFON NUMARAMIZ</h4>
-                                            <p>+90 555 999 1234</p>
+                                            <h4 class="contact-title" <?php if($phone_no_title["visibility"]!=1) echo "style='display:none;'";?> ><?php echo $phone_no_title["text"];?></h4>
+                                            <p><?php echo $phone_no["text"];?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -119,16 +164,13 @@
                         <hr class="col-lg-12 col-sm-8 col-md-8 col-xs-8">
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                             <div class="section-header">
-                                <h2 class="heading-line">Konumumuz</h2>
+                                <h2 class="heading-line"<?php if($location_title["visibility"]!=1) echo "style='display:none;'";?>><?php echo $location_title["text"];?></h2>
                             </div>
 
                         </div>
                     </div>
-                    <p>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.8200995410994!2d27.81563811505901!3d41.18209087928356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b4e745bc85d6bf%3A0xf06945ec414379c0!2zTmFtxLFrIEtlbWFsIMOcbml2ZXJzaXRlc2kgw4dvcmx1IE3DvGhlbmRpc2xpayBGYWvDvGx0ZXNp!5e0!3m2!1str!2str!4v1603456044669!5m2!1str!2str"
-                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0"></iframe>
+                    <p <?php if($location_html["visibility"]!=1) echo "style='display:none;'";?> >
+                    <?php echo $location_html["text"]; ?>
                     </p>
                     <hr class="col-lg-12 col-sm-8 col-md-8 col-xs-8">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

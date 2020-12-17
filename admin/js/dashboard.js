@@ -99,4 +99,12 @@ $(function () {
     el.slideUp(800)
   })
 
+  $("#edit-contact-us").on('click', function () {
+    var el = $(this)
+    $("#main").empty()
+    $("#main").load("tabs/editContactUs.php")
+    $(".side-button").slideDown(1600)
+    el.slideUp(800)
+  })
+
 })
