@@ -58,14 +58,6 @@ while($result=mysqli_fetch_array($results)){
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                <div class="page-breadcrumb">
-                    <ol class="breadcrumb">
-                        <li><a href="index.php">Ana Sayfa</a></li>
-                        <li class="active">İLETİŞİM</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                 <div class="page-section">
                     <h1 class="page-title" <?php if($page_title["visibility"]!=1) echo "style='display:none;'";?>><?php echo $page_title["text"]; ?></h1>
                 </div>

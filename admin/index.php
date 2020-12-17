@@ -1,13 +1,13 @@
 <?php
-  session_start();
-  if ($_SESSION["username"]==""){
-    $message = "<h1> BOŞ </h1>";
-    header("Location:login.php");
-  }
-  
+session_start();
+if ($_SESSION["username"]==""){
+  $message = "<h1> BOŞ </h1>";
+  header("Location:login.php");
+}
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <?php require('headtag-metas.html');?>
