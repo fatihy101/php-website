@@ -11,38 +11,28 @@ $result = mysqli_fetch_array($conn->query($SQL));
 <html lang="en">
 
 <head>
-<?php require 'headtag-metas.html';?>
+    <?php require 'headtag-metas.html';?>
 
 </head>
 
 <body>
-<?php require 'header-default.php';?>
+    <?php require 'header-default.php';?>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                <div class="page-breadcrumb">
-                    <ol class="breadcrumb">
-                        <li><a href="index.php">Ana Sayfa</a></li>
-                        <li class="active">Hakkımızda</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="row">
                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                           
-                            <div class="post-img"> <img src="<?php echo $result["photo"];?>" width="1140" height="440"></div>
+
+                            <div class="post-img"> <img src="<?php echo $result["photo"];?>" width="1140" height="440">
+                            </div>
                             <div class="row">
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                     <div class="blog-social-share">
                                         <ul>
-                                        <?php //Social Media accounts.  
+                                            <?php //Social Media accounts.  
                                         $SQL = "SELECT * FROM SocialMedia";
                                         $social_medias = $conn->query($SQL);
                                         
